@@ -1,7 +1,8 @@
 title: Design Team Handbook
 description: Guidelines, process, and references for the design team
-theme: just-the-docs
-url: https://UBC-Rocket.github.io/docs
+remote_theme: just-the-docs/just-the-docs
+url: https://ubc-rocket.github.io
+baseurl: /docs
 
 # Enable the built-in search
 search_enabled: true
