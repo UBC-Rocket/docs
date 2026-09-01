@@ -39,6 +39,16 @@ theme:
 plugins:
   - search
   - awesome-pages             # folder structure drives the nav
+  - git-revision-date-localized:
+      type: date
+      enable_creation_date: true
+      fallback_to_build_date: true
+
+hooks:
+  - hooks/page_meta.py
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition                # note/warning callout boxes
