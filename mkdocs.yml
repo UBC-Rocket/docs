@@ -46,6 +46,7 @@ plugins:
 
 hooks:
   - hooks/page_meta.py
+  - hooks/iframe_embed.py
 
 extra_css:
   - stylesheets/extra.css

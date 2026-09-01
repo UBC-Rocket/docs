@@ -23,11 +23,7 @@ The full drop-test report as a PDF:
 
 The same PDF embedded directly in the page:
 
-<iframe src="../2025-recovery-drop-test.pdf"
-        width="100%" height="600px" style="border: 1px solid #ccc;">
-  This browser can't display embedded PDFs.
-  <a href="../2025-recovery-drop-test.pdf">Download it instead.</a>
-</iframe>
+![embed](2025-recovery-drop-test.pdf)
 
 !!! note
     MkDocs has a callout syntax like this — handy for warnings, tips, and notes.

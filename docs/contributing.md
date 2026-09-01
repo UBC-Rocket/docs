@@ -121,12 +121,16 @@ to reach it (e.g. a page one level up: `parachute/2025-recovery-drop-test.pdf`).
 
 ### 3. Embed it inline
 
-```html
-<iframe src="../2025-recovery-drop-test.pdf"
-        width="100%" height="600px" style="border: 1px solid #ccc;">
-  <a href="../2025-recovery-drop-test.pdf">Download it instead.</a>
-</iframe>
+To show the PDF (or any other page — a draw.io diagram, a Google Doc, etc.)
+inline, use image syntax with the alt text `embed`:
+
+```markdown
+![embed](2025-recovery-drop-test.pdf)
 ```
+
+Any `![embed](...)` (or `![iframe](...)`) is turned into a full-width inline
+frame automatically — no hand-written `<iframe>` needed. Regular images with
+any other alt text still render as normal pictures.
 
 See **2025-26 → Recovery → Parachute → Drop Test** for a working example.
 
