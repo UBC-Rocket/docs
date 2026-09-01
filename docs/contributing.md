@@ -122,9 +122,9 @@ to reach it (e.g. a page one level up: `parachute/2025-recovery-drop-test.pdf`).
 ### 3. Embed it inline
 
 ```html
-<iframe src="2025-recovery-drop-test.pdf"
+<iframe src="../2025-recovery-drop-test.pdf"
         width="100%" height="600px" style="border: 1px solid #ccc;">
-  <a href="2025-recovery-drop-test.pdf">Download it instead.</a>
+  <a href="../2025-recovery-drop-test.pdf">Download it instead.</a>
 </iframe>
 ```
 
@@ -137,11 +137,6 @@ Same idea — keep an image next to the page that uses it and reference it by na
 ```markdown
 ![Airframe diagram](airframe-diagram.png)
 ```
-
-!!! warning "Large files"
-    GitHub Free includes only 1 GB of Git LFS storage. For big CAD exports,
-    video, or many large PDFs, use Git LFS or link out to Google Drive instead
-    of committing them directly.
 
 !!! note "Filenames must match exactly"
     The site builds in `--strict` mode, so a link to a PDF that isn't there
