@@ -1,0 +1,57 @@
+site_name: UBC Rocket Docs
+site_description: UBC Rocket's central repository for design documentation and reports
+site_url: https://ubc-rocket.github.io/docs/
+repo_url: https://github.com/UBC-Rocket/docs
+repo_name: UBC-Rocket/docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant      # fast page loads
+    - navigation.tracking     # URL updates with scroll
+    - navigation.sections     # top-level groups shown as sections
+    - navigation.indexes      # section landing pages (index.md)
+    - navigation.top          # back-to-top button
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.action.edit     # "edit this page" pencil
+    - content.code.copy       # copy button on code blocks
+
+plugins:
+  - search
+  - awesome-pages             # folder structure drives the nav
+
+markdown_extensions:
+  - admonition                # note/warning callout boxes
+  - pymdownx.details
+  - pymdownx.superfences      # nested code/diagram blocks
+  - pymdownx.highlight
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true         # clickable anchor on each heading
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/UBC-Rocket

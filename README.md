@@ -1,32 +1,45 @@
 # UBC Rocket Docs
 
 Central documentation site for UBC Rocket, built with
-[Just the Docs](https://just-the-docs.com/) and hosted on GitHub Pages.
+[MkDocs Material](https://squidfunk.github.io/mkdocs-material/) and hosted on
+GitHub Pages.
 
 **Live site:** https://ubc-rocket.github.io/docs/
 
-## Structure
-Docs are organized by season → team → page. Each season is a Jekyll
-*collection* (a folder starting with `_`, e.g. `_2025-26/`), which lets team
-names repeat across years without clashing.
+## How it works
+
+The sidebar mirrors the folder structure under `docs/` automatically (via the
+awesome-pages plugin) — add a Markdown file to a folder and it shows up in the
+nav. No front matter needed.
 
 ```
-_2025-26/
-  avionics/
-    index.md        # team landing page
-    firmware.md     # a page under Avionics
-  recovery/
-    ...
+docs/
+  2025-26/
+    avionics/
+      index.md          # team landing page
+      firmware.md
+      battery/          # nest as deep as you like
+        index.md
+        report-1.md
+    recovery/
+      parachute/
+        index.md
+        parachutes.md
+        drop-test.md
+  assets/pdfs/          # PDFs live here
 ```
+
+Order within a folder is alphabetical unless a `.pages` file specifies it.
 
 ## Editing
-Click **Edit this page on GitHub** at the bottom of any page on the live site,
-or edit the Markdown files directly in this repo. See
-[contributing.md](contributing.md) for the full guide.
 
-## Running locally (optional)
+Click the pencil icon on any page, or edit files in this repo. See
+[docs/contributing.md](docs/contributing.md).
+
+## Running locally
+
 ```bash
-bundle install
-bundle exec jekyll serve
-# open http://localhost:4000/docs/
+pip install -r requirements.txt
+mkdocs serve
+# open http://127.0.0.1:8000/
 ```
