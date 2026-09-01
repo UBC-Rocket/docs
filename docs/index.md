@@ -1,4 +1,4 @@
-# UBC Rocket Documentation
+# Home
 
 Welcome to UBC Rocket's central design documentation. Use the sidebar to browse
 by season and team, or the search bar at the top to find anything.
