@@ -22,3 +22,26 @@
 .page-meta a:hover {
   color: var(--md-accent-fg-color);
 }
+
+.page-meta__author {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+a.page-meta__author {
+  text-decoration: none;
+}
+
+a.page-meta__author:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.page-meta__avatar {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
