@@ -1,9 +1,9 @@
 ---
-title: Recovery
+title: Parachutes
 layout: default
 has_children: true
 ---
 
-# Recovery — 2025-26
+# Parachutes
 
 Parachutes, deployment, and recovery testing documentation.

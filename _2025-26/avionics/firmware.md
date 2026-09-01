@@ -2,7 +2,6 @@
 title: Firmware
 layout: default
 parent: Avionics
-nav_order: 1
 ---
 
 # Firmware

@@ -2,7 +2,6 @@
 title: Parachutes
 layout: default
 parent: Recovery
-nav_order: 1
 ---
 
 # Parachutes
