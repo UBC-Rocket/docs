@@ -21,7 +21,7 @@ For example, a new report for this season's avionics battery project:
 `docs/2025-26/avionics/battery/report-2.md`
 
 That's it. The page appears in the sidebar under
-2025-26 → Avionics → Battery Project automatically.
+2025-26 → Avionics → Battery automatically.
 
 ### Folder landing pages
 
@@ -44,6 +44,20 @@ nav:
 Folders and files not listed fall to the bottom alphabetically. You only need a
 `.pages` file in folders where order matters — elsewhere alphabetical is fine.
 
+### Fixing mangled section names
+
+MkDocs auto-generates sidebar titles from folder names and turns hyphens into
+spaces (so `2025-26` shows as "2025 26"). To force the exact text, add a
+`title:` line to that folder's `.pages` file:
+
+```yaml
+title: 2025-26
+nav:
+  - index.md
+  - avionics
+  - recovery
+```
+
 !!! tip
     A common alternative to `.pages` files is numeric filename prefixes
     (`01-intro.md`, `02-setup.md`). Pick one convention and stick with it.
@@ -56,8 +70,8 @@ Just create a new folder under `docs/`, e.g. `docs/2026-27/`, and add an
 
 ## Nesting depth
 
-Unlike the previous setup, there is **no three-level limit** — nest folders as
-deep as the material genuinely needs. Keep it reasonable for readability, but
+There is **no three-level limit** — nest folders as deep as the material
+genuinely needs. Keep it reasonable for readability, but
 season → team → project → sub-project → page all works.
 
 ## Linking to other pages
@@ -73,28 +87,44 @@ build time if a link breaks):
 
 ## Adding and linking PDFs
 
-There's no upload button — commit the PDF like any other file.
+Keep a PDF **in the same project folder as the page that uses it.** MkDocs copies
+any non-Markdown file in `docs/` into the built site at the same location, so a
+co-located PDF just works — and your links stay short with no `../` climbing.
 
 ### 1. Add the file
 
-Put shared PDFs in `docs/assets/pdfs/`. On GitHub: open that folder, then
-**Add file → Upload files**, drag the PDF in, and **Commit changes**. Use
-lowercase, hyphenated, dated names: `2025-recovery-drop-test.pdf`.
+Put the PDF directly in the project folder alongside its pages, e.g.:
+
+```
+docs/2025-26/recovery/parachute/
+├── index.md
+├── parachutes.md
+├── drop-test.md
+└── 2025-recovery-drop-test.pdf     ← here
+```
+
+On GitHub: open the project folder, then **Add file → Upload files**, drag the
+PDF in, and **Commit changes**. Use lowercase, hyphenated, dated names:
+`2025-recovery-drop-test.pdf`. The `.pages` nav ignores raw PDFs, so it won't
+appear in the sidebar.
 
 ### 2. Link to it
 
+Because the PDF is in the same folder as the page, just use its filename:
+
 ```markdown
-[Drop-test report (PDF)](../../../assets/pdfs/2025-recovery-drop-test.pdf)
+[Drop-test report (PDF)](2025-recovery-drop-test.pdf)
 ```
 
-Count the `../` back up to `docs/` from wherever your page lives.
+If you reference a PDF in a *different* folder, use a relative path with `../`
+to reach it (e.g. a page one level up: `parachute/2025-recovery-drop-test.pdf`).
 
 ### 3. Embed it inline
 
 ```html
-<iframe src="../../../assets/pdfs/2025-recovery-drop-test.pdf"
+<iframe src="2025-recovery-drop-test.pdf"
         width="100%" height="600px" style="border: 1px solid #ccc;">
-  <a href="../../../assets/pdfs/2025-recovery-drop-test.pdf">Download it instead.</a>
+  <a href="2025-recovery-drop-test.pdf">Download it instead.</a>
 </iframe>
 ```
 
@@ -102,11 +132,18 @@ See **2025-26 → Recovery → Parachute → Drop Test** for a working example.
 
 ### Images
 
+Same idea — keep an image next to the page that uses it and reference it by name:
+
 ```markdown
-![Airframe diagram](../../../assets/images/airframe-diagram.png)
+![Airframe diagram](airframe-diagram.png)
 ```
 
 !!! warning "Large files"
     GitHub Free includes only 1 GB of Git LFS storage. For big CAD exports,
     video, or many large PDFs, use Git LFS or link out to Google Drive instead
     of committing them directly.
+
+!!! note "Filenames must match exactly"
+    The site builds in `--strict` mode, so a link to a PDF that isn't there
+    (typo, wrong case, or moved file) turns the build **red** instead of
+    shipping a dead link. Match the committed filename exactly, case included.
