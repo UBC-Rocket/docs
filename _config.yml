@@ -1,20 +1,68 @@
-title: Design Team Handbook
-description: Guidelines, process, and references for the design team
+title: UBC Rocket Docs
+description: UBC Rocket's central repository for design documentation and reports
 remote_theme: just-the-docs/just-the-docs
+
 url: https://ubc-rocket.github.io
 baseurl: /docs
 
-# Enable the built-in search
+# --- Plugins ---
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# --- Search ---
 search_enabled: true
 search:
   heading_level: 2
   previews: 3
   tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: true
 
-# Optional: link back to the repo so people can edit
+# --- Collections: one per season ---
+# Each year is its own collection so team names (Avionics, Recovery, etc.)
+# can repeat across years without title collisions.
+collections:
+  2025-26:
+    permalink: "/:collection/:path/"
+    output: true
+  2024-25:
+    permalink: "/:collection/:path/"
+    output: true
+
+# --- Nav grouping: makes each collection a top-level sidebar section ---
+just_the_docs:
+  collections:
+    2025-26:
+      name: 2025-26
+      nav_order: 1
+    2024-25:
+      name: 2024-25
+      nav_order: 2
+
+# --- Footer / repo link ---
 aux_links:
   "View on GitHub":
     - "https://github.com/UBC-Rocket/docs"
+aux_links_new_tab: true
 
-plugins:
-  - jekyll-remote-theme
+# Show "Edit this page on GitHub" links under every page
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/UBC-Rocket/docs"
+gh_edit_branch: "main"
+gh_edit_view_mode: "edit"
+
+# Footer text
+footer_content: "UBC Rocket &middot; Design Documentation"
+
+# Collapse deep sections by default in the sidebar
+nav_error_report: true
+
+# Don't build these
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
