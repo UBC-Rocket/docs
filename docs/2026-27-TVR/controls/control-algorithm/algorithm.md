@@ -1,6 +1,8 @@
 The most recent tentative proposal for the control algorithm is found below. Not that this may be subject to changes as we are still currently validating it. 
 
-[See Rocket_Proposal](Rocket_Proposal.pdf)
+[See Rocket_Proposal (also embedded below)](Rocket_Proposal.pdf)
+
+![embed](Rocket_Proposal.pdf)
 
 ![embed](Phase_1.jpg)
 
