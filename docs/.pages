@@ -1,7 +1,5 @@
 nav:
   - index.md
   - contributing.md
-  - 2026-27-COTS
-  - 2026-27-Liquid
-  - 2026-27-TVR
-  - 2025-26
+order: desc
+order_by: title
