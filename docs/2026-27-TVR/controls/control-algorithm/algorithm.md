@@ -2,10 +2,8 @@ The most recent tentative proposal for the control algorithm is found below. Not
 
 [See Rocket_Proposal](Rocket_Proposal.pdf)
 
-![embed](Phase 1.jpg)
+![embed](Phase_1.jpg)
 
 Sources:
-
-    Design, Optimal Guidance and Control of a Low-cost Re-usable Electric Model Rocket | Spannagal et al. | 2021 | https://arxiv.org/pdf/2103.04709
-
-    Full Quaternion Based Attitude Control for a Quadrotor | Fresk and Nikolakopoulos | 2013 
+- Design, Optimal Guidance and Control of a Low-cost Re-usable Electric Model Rocket | Spannagal et al. | 2021 | https://arxiv.org/pdf/2103.04709
+- Full Quaternion Based Attitude Control for a Quadrotor | Fresk and Nikolakopoulos | 2013 
