@@ -1,5 +1,6 @@
 nav:
   - index.md
   - contributing.md
+  - ...
 order: desc
 order_by: title
