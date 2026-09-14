@@ -1,4 +1,4 @@
-# ESC Project Log / Notes
+# ESC Project Log
 
 ## DATE: August 9, 2026
 
