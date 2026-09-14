@@ -64,17 +64,17 @@
 
 - Added Footprints for FET and MCU in our altium library
 
-## Date: August 15, 2026
+## DATE: August 15, 2026
 
 - Added Footprint for Gate Driver in our altium library
 
-## Date August 16, 2026
+## DATE: August 16, 2026
 
 - Looked into how to spec switching frequency for PWM and target rise and fall time, learnt that higher freq. / lower rise time means smoother drive but more switching losses and vice-versa. General ESC PWM freqency is between 25-96 KHz, with 48 KHz being generally used value. Thinking of just using 48 KHz, and **looking into rise and fall time calculation, need to learn a few things first.**
 
 - Thinking about the high level of battery monitoring / balancing, mainly which circuit should be in ESC board and which in Backplane cause anything carrying current related to battery preferred to have it on ESC board to keep current loop small but if on Backplane, then that funcionality can be used without ESC board.
 
-## Date August 20, 2026
+## DATE: August 20, 2026
 
 - Still stuck on where to put the balancing circuit and charger circuit. Looking into switching to different connector with high current rating so can run balance current and charging current using multiple pins in parallel
 
@@ -82,7 +82,7 @@
 
 - **Important:** Need to account for return path of current as well. So a GND pin next to each balance and charge pin to force most current to return through these GND pins or else current will return on same pins as signal's. (Current takes the path of least resistance)
 
-## Date August 21, 2026
+## DATE: August 21, 2026
 
 - Clarified that one of the core jobs of the decoupling cap network in VBAT in to half bridge is to absorb Ldi/dt spike and inductive kick back (regn.) to protect the bus and TVS as final layer of protection to clamp any more spikes. **Imporper sizing will blow the fets up**
 
@@ -90,7 +90,7 @@
 
 - Final Decision made: Battery charging and monitoring / balancing circuit goes in backplane, Only fuel gauge and current monitoring circuit with shunt in ESC and Fuel Gauge I2C to FC
 
-## Date August 24, 2026
+## DATE: August 24, 2026
 
 - Learnt about miller effect - the gate voltage plateaus when the FET turns on (Vgs above threshold voltage) which charges the gate - drain cap and gate current flows to charge this cap instead of Gate - Source cap which holds the gate voltage constant and once drain voltage settles at full drive voltage, garte voltage rises again. 
 
@@ -98,7 +98,7 @@
 
 - Solutions are strong pull down or active miller clamp (FET to GND). DRV8353SRTAR has inbuilt strong pull down to prevent this exact false turn on due to dv/dt. **Yay**
 
-## Date August 25, 2026
+## DATE: August 25, 2026
 
 - I am so stupid, i can just put the battery balance connector in the backplane itself, they are mounted vertically so they are next to each other. how did i not think of that. Just the charging current needs to go from Backplane to ESC. Decided.
 
@@ -108,6 +108,32 @@
 
 - Started looking into overshoot and undershoot, causes, risks and how to handle it etc.. **(Reminder that undershoot may be more fatal cause a chip's internal weak clamp / ESD diode would forward bias and blow itself up)**
 
-## Date August 26, 2026
+## DATE: August 26, 2026
 
 - Saw some cool stuff at work, saw a full H-bridge PWM waveform with dead time, rise time, fall time, undershoot, overshoot, inductive kickback etc.. very cool
+
+## DATE: August 28, 2026
+
+- Revised again why 3 phase power is more efficient, not just for ESC but in general as well - constant instantaneous power leading smooth current so no ripple or overshoot losses is primary reason for higher efficiency. (Do not need return conductor helps as well)
+
+## DATE: September 11, 2026
+
+- Spent like a week breaking my head about FET thermal calculations, especially about using PCB as a heatsink, thermal vias, lateral spread etc..., for the USB-C PD Charger DFT PCB but applies very well here. Have a much better understanding now.
+
+- Quick summary: Two main elements to consider for Cu plane/pour, R_Surface to Ambient and R_lateral (very difficult to estimate), high density thermal vias on IC thermal pad/EP brings down R_vias and a pour on the EP does not help with lateral resistance but increases surface area which reduces R_SA. Also 2 oz Cu is expensive, so use pour on outer layers with thermal vias to achieve a goot R_total. (Refer to USB-C PD Charger Logs / Docs for detailed notes)
+
+## DATE: September 12, 2026
+
+- **Major Architectural Change**: The USB-C PD Charger is going a serperate DFT PCB cause we have two lipo we can just swap and it seems overkill to put a charger in drone. Shadab also wants one of these for COTS so helps there as well. Main changes are no more charge current through connector problem so will finalize a different B to B connector soon.
+
+## DATE: September 13, 2026
+
+- **Major Architectural Change**: I am making a new FC (Yay) cause the PCIe is so annoying, very difficult to mount, we are not using half the stuff in there. I am going to desolder the MCU from old FC and solder it in new FC to save money and not refactor firmware again (Firmware and controls happy with it). So the stack is new FC, backplane and ESC now.
+
+- **Major Architectural Change**: Sensor board is merged with FC now so all the sensors in FC itself cause why have two boards with sensors on it, makes sense to combine, simplifies stack. 
+
+- **Major Logistics Change**: I am hiring Ken for TVR Hardware, he seems pretty decent, i have seen him around in hennings regularly, he is commited and hannah seems to like him so ticks all the boxes for me. He will be taking over the backplane PCB and Test PCB.
+
+- I am adding a UART from ESC MCU to FC just so they can talk to each other incase needed.
+
+
