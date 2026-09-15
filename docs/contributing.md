@@ -146,3 +146,38 @@ Same idea — keep an image next to the page that uses it and reference it by na
     The site builds in `--strict` mode, so a link to a PDF that isn't there
     (typo, wrong case, or moved file) turns the build **red** instead of
     shipping a dead link. Match the committed filename exactly, case included.
+
+## Admonitions / Callouts / Alerts
+
+As you look around the documentation you might see colorful containers of text like this:
+
+!!! example
+    Hello!
+
+These go by various names (e.g. admonitions, callouts, alerts) depending on the documentation platform you are using. In Material for MkDocs (the documentation framework we use), it is known as admonitions.
+
+To create an admonition, use the syntax
+
+```markdown
+!!! <type> "[title]"
+    <content>
+```
+
+The `type` and `content` are required, while the `title` is optional. The `content` must be indented after by 4 spaces. The `title` must be surrounded by quotation marks (").
+
+For example, to create the following admonition
+
+!!! warning "I am a warning"
+    Some important warning goes here
+
+you would write
+
+```markdown
+!!! warning "I am a warning"
+    Some important warning goes here
+```
+
+To learn more about writing admonitions, see <https://squidfunk.github.io/mkdocs-material/reference/admonitions>.
+
+A list of valid `type` values, is viewable at <https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types>.
+
