@@ -10,7 +10,7 @@
 | 4 | GND - +12V Return Path| 6×    | 6    |
 | 5 | PWM                   | 2×    | 2    |
 | 6 | Gate Driver SPI       | 2×    | 8    |
-| 7 | ESC MCU UART          | 1×    | 2    |
+| 7 | ESC MCU UART          | 2×    | 4    |
 | 8 | Gate Driver EN        | 2×    | 2    |
 | 9 | Gate Driver nFault INT| 2×    | 2    |
 | 10| ESC Temp Sensor I2C   | 2×    | 4    |
@@ -20,7 +20,7 @@
 | 14 | Camera I2C            | 1×    | 2    |
 | 15 | Dynamixel TTL         | 1×    | 1    |
 | 15 | Alternating GND       | ~15x     | 15   |
-|   | **TOTAL**             |       | **64** |
+|   | **TOTAL**             |       | **66** |
 
 **Important Note:** For +12V, Total Max Dynamixels Current at stall torque is 4.6A. Each pin in B to B connector can do 1A Max, so using 6 pins in parallel. Importantly, +12V needs to have GND very close to it for return path (Current takes the path of least resistance) or else the return current will flow through all the other GND Pins which will result in overlap of return paths of Digital / Analog signals and Noisy PWR leading to noise coupling. (Very bad from SI/PI prespective)  
 
@@ -79,17 +79,17 @@ Socket:
 |     Gate Driver_1 SPI_MISO         | 39  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 40  | Camera I2C_SDA              |
 |     Gate Driver_1 SPI_MOSI         | 41  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 42  | Camera I2C_SCL             |
 |     GND         | 43  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 44  | GND             |
-|     Gate Driver_2 SPI_CS         | 45  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 46  | ESC MCU UART_TX (FC_TX to ESC_RX)            |
-|     Gate Driver_2 SPI_SCLK         | 47  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 48  |  ESC MCU UART_RX (FC_RX to ESC_TX)            |
+|     Gate Driver_2 SPI_CS         | 45  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 46  | ESC MCU1 UART_TX (FC_TX to ESC_RX)            |
+|     Gate Driver_2 SPI_SCLK         | 47  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 48  |  ESC MCU1 UART_RX (FC_RX to ESC_TX)            |
 |     GND         | 49  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 50  | GND             |
 |     Gate Driver_2 SPI_MISO         | 51  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 52  |  Unassigned            |
 |     Gate Driver_2 SPI_MOSI         | 53  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 54  | +3V3             |
 |     GND         | 55  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 56  | GND             |
 |     TTL         | 57  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 58  | +5V             |
 |     GND         | 59  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 60  | GND             |
-|     Unassigned         | 61  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 62  | +12V             |
-|     Unassigned         | 63  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 64  | GND             |
-|     Unassigned         | 65  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 66  | +12V             |
+|     ESC MCU2 UART_TX (FC_TX to ESC_RX)         | 61  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 62  | +12V             |
+|     ESC MCU2 UART_RX (FC_RX to ESC_TX)         | 63  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 64  | GND             |
+|     GND         | 65  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 66  | +12V             |
 |     Unassigned         | 67  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 68  | GND             |
 |     Unassigned         | 69  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 70  | +12V             |
 |     Unassigned         | 71  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 72  | GND             |
