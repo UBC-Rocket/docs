@@ -60,11 +60,9 @@ Source code: <https://github.com/am32-firmware/am32-wiki>
 #### Online configurator
 
 !!! note
-
     The online configurator requires a browser with Web Serial support.
 
 !!! warning
-
     Firefox appears to have issues with receiving data from the ESC over Web Serial. Unsure if this is an issue with the configurator itself, or with the Web Serial implementation on Firefox. Either way, if you cannot read the configuration from the ESC on Firefox, try switching to a Chromium-based browser.
 
 <https://am32.ca/configurator>
