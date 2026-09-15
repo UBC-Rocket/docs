@@ -1,4 +1,4 @@
-# Backplane TVR Project Log
+# USB-C PD Battery Charger DFT PCB Project Log
 
 ## Date: 09/08/2026
 
