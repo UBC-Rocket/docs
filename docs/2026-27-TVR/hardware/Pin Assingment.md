@@ -85,8 +85,8 @@ Socket:
 |     Gate Driver_2 SPI_MISO         | 51  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 52  |  Unassigned            |
 |     Gate Driver_2 SPI_MOSI         | 53  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 54  | +3V3             |
 |     GND         | 55  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 56  | GND             |
-|     Unassigned         | 57  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 58  | +5V             |
-|     Unassigned         | 59  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 60  | GND             |
+|     TTL         | 57  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 58  | +5V             |
+|     GND         | 59  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 60  | GND             |
 |     Unassigned         | 61  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 62  | +12V             |
 |     Unassigned         | 63  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 64  | GND             |
 |     Unassigned         | 65  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 66  | +12V             |
