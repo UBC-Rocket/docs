@@ -16,7 +16,7 @@
 | 10 | Fuel Gauge I2C        | 1×    | 2    |
 | 12 | Cell Monitoring I2C   | 1×    | 2    |
 | 13 | Camera I2C            | 1×    | 2    |
-| 14 | Alternating GND       | 15x     | 15   |
+| 14 | Alternating GND       | ~15x     | 15   |
 |   | **TOTAL**             |       | **51** |
 
 ## Choosen Connector:
@@ -45,16 +45,16 @@
 |     Gate Driver_1 SPI_CS         | 33  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 34  | Gate Driver_1 nFault INT             |
 |     Gate Driver_1 SPI_SCLK         | 35  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 36  | Gate Driver_2 nFault INT             |
 |     GND         | 37  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 38  |  GND            |
-|     Gate Driver_1 SPI_MISO         | 39  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 40  |              |
-|     Gate Driver_1 SPI_MOSI         | 41  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 42  |              |
-|     GND         | 43  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 44  |              |
-|              | 45  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 46  |              |
-|              | 47  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 48  |              |
-|              | 49  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 50  |              |
-|              | 51  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 52  |              |
-|              | 53  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 54  | +3V3             |
-|              | 55  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 56  | GND             |
-|              | 57  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 58  | +5V             |
-|              | 59  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 60  | GND             |
+|     Gate Driver_1 SPI_MISO         | 39  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 40  | Camera I2C_SDA              |
+|     Gate Driver_1 SPI_MOSI         | 41  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 42  | Camera I2C_SCL             |
+|     GND         | 43  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 44  | GND             |
+|     Gate Driver_2 SPI_CS         | 45  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 46  | ESC MCU UART_TX (FC_TX to ESC_RX)            |
+|     Gate Driver_2 SPI_SCLK         | 47  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 48  |  ESC MCU UART_RX (FC_RX to ESC_TX)            |
+|     GND         | 49  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 50  | GND             |
+|     Gate Driver_2 SPI_MISO         | 51  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 52  |  Unassigned            |
+|     Gate Driver_2 SPI_MOSI         | 53  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 54  | +3V3             |
+|     GND         | 55  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 56  | GND             |
+|     Unassigned         | 57  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 58  | +5V             |
+|     Unassigned         | 59  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 60  | GND             |
 
 
