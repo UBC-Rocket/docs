@@ -22,7 +22,7 @@
 
 - Specced out a FET - **Infineon IAUC120N04S6L005ATMA1**, wowed by this FET, just amazing. Extreamely low RDS(on) - 0.43mR @ VGS >= 10V, $\theta$-ja of just 27, did thermal calc - temp rise of about 18 C only at 40A: **Do not need a heatsink** (Yay). Some stock in LCSC and little expensive but worth it
 
-- Decided on **STM32G070CBT6** MCU, AM32 compatibile, M0+ Arm Cortex, 128Kb flash, 32Kb RAM, 64MHz, LQFP 48 and just 2 Bucks plus good stock in LCSC. Should be good
+- Decided on **STM32G071CBT6** MCU, AM32 compatibile, M0+ Arm Cortex, 128Kb flash, 32Kb RAM, 64MHz, LQFP 48 and just 2 Bucks plus good stock in LCSC. Should be good
 
 - Decided on shunt based current monitoring for each phase and for battery
 
