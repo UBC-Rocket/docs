@@ -22,7 +22,7 @@
 
 - Specced out a FET - **Infineon IAUC120N04S6L005ATMA1**, wowed by this FET, just amazing. Extreamely low RDS(on) - 0.43mR @ VGS >= 10V, $\theta$-ja of just 27, did thermal calc - temp rise of about 18 C only at 40A: **Do not need a heatsink** (Yay). Some stock in LCSC and little expensive but worth it
 
-- Decided on **STM32G071CBT6** MCU, AM32 compatibile, M0+ Arm Cortex, 128Kb flash, 32Kb RAM, 64MHz, LQFP 48 and just 2 Bucks plus good stock in LCSC. Should be good
+- Decided on **STM32G071C8T6** MCU, AM32 compatibile, M0+ Arm Cortex, 128Kb flash, 32Kb RAM, 64MHz, LQFP 48 and just 2 Bucks plus good stock in LCSC. Should be good
 
 - Decided on shunt based current monitoring for each phase and for battery
 
@@ -120,7 +120,7 @@
 
 - Spent like a week breaking my head about FET thermal calculations, especially about using PCB as a heatsink, thermal vias, lateral spread etc..., for the USB-C PD Charger DFT PCB but applies very well here. Have a much better understanding now.
 
-- Quick summary: Two main elements to consider for Cu plane/pour, R_Surface to Ambient and R_lateral (very difficult to estimate), high density thermal vias on IC thermal pad/EP brings down R_vias and a pour on the EP does not help with lateral resistance but increases surface area which reduces R_SA. Also 2 oz Cu is expensive, so use pour on outer layers with thermal vias to achieve a goot R_total. (Refer to USB-C PD Charger Logs / Docs for detailed notes)
+- Quick summary: Two main elements to consider for Cu plane/pour, R_Surface to Ambient and R_lateral (very difficult to estimate), high density thermal vias on IC thermal pad/EP brings down R_vias and a pour on the EP does not help with lateral resistance but increases surface area which reduces R_SA. Also 2 oz Cu is expensive, so use pour on outer layers with thermal vias to achieve a good R_total. (Refer to USB-C PD Charger Logs / Docs for detailed notes)
 
 ## DATE: September 12, 2026
 
@@ -135,5 +135,18 @@
 - **Major Logistics Change**: I am hiring Ken for TVR Hardware, he seems pretty decent, i have seen him around in hennings regularly, he is commited and hannah seems to like him so ticks all the boxes for me. He will be taking over the backplane PCB and Test PCB.
 
 - I am adding a UART from ESC MCU to FC just so they can talk to each other incase needed.
+
+## DATE: September 15, 2026
+
+- Pin Assignment mostly done, decided on BB51-84AT-1-3HB 84 Pin, 1mm pitch, keyed, only about 1.5 CAD and decent stock in LCSC. 
+
+- Dynamixel and Battery will plug into ESC PCB vertically on the bottom to keep harness organised. +12V for Dynamixel will be sent from backplane using 6 pins (1A each) and added GND next to each pin for proper return path. **Need to add the Dynamixel connector to ESC PCB.**
+
+- Cell Voltages will also be exposed in B to B connector, to connect it to monitoring IC on backplane, **Need to add the balance JST on ESC PCB.**
+
+- Thank You Ken for review of Pin Assignment Doc and catching my one MCU for two channels mistake. **Each channel will have its own STM32G071C8T6 MCU.**
+
+- For ESC MCU and FC MCU communication, two options - Either ESC MCU only runs AM32, FC takes care of everything else for ESC (No in-house firmware is needed for ESC) or ESC MCU controls Gate Driver IC and everything else on ESC and we send a custom packet from ESC MCU to FC and vice-versa with all data and configuration that is needed. (Will need in-house firmware for ESC on top of AM32 but will free up the FC). Need to discuss with firmware, upto them to decide.
+
 
 
