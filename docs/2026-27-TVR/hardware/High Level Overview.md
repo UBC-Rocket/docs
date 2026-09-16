@@ -14,4 +14,4 @@
 | Telemetry Radio GND PCB |   Nick   |  Low  | 10/11/2026  | 18/10/2026 |
 | RTK-GNSS GND PCB |   Nick   |  Low  | 01/11/2026  | 15/11/2026 |
 
-Note: PCB Fabrication Orderis batched into two dates: 18/10/2026 and 15/11/2026
+Note: PCB Fabrication Order's are batched into two dates: 18/10/2026 and 15/11/2026. (Will be co-ordinated with COTS)
