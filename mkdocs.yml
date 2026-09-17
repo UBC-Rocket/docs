@@ -6,63 +6,70 @@ repo_name: UBC-Rocket/docs
 edit_uri: edit/main/docs/
 
 theme:
-  name: material
-  palette:
-    # Light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    # Dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-  features:
-    - navigation.instant      # fast page loads
-    - navigation.tracking     # URL updates with scroll
-    - navigation.sections     # top-level groups shown as sections
-    - navigation.indexes      # section landing pages (index.md)
-    - navigation.top          # back-to-top button
-    - toc.follow
-    - search.suggest
-    - search.highlight
-    - content.action.edit     # "edit this page" pencil
-    - content.code.copy       # copy button on code blocks
+    name: material
+    palette:
+        # Light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: indigo
+          accent: indigo
+          toggle:
+              icon: material/weather-night
+              name: Switch to dark mode
+        # Dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: indigo
+          accent: indigo
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to light mode
+    features:
+        - navigation.instant # fast page loads
+        - navigation.tracking # URL updates with scroll
+        - navigation.sections # top-level groups shown as sections
+        - navigation.indexes # section landing pages (index.md)
+        - navigation.top # back-to-top button
+        - toc.follow
+        - search.suggest
+        - search.highlight
+        - content.action.edit # "edit this page" pencil
+        - content.code.copy # copy button on code blocks
 
 plugins:
-  - search
-  - awesome-pages             # folder structure drives the nav
-  - git-revision-date-localized:
-      type: date
-      enable_creation_date: true
-      fallback_to_build_date: true
+    - search
+    - awesome-pages # folder structure drives the nav
+    - git-revision-date-localized:
+          type: date
+          enable_creation_date: true
+          fallback_to_build_date: true
 
 hooks:
-  - hooks/page_meta.py
-  - hooks/iframe_embed.py
+    - hooks/page_meta.py
+    - hooks/iframe_embed.py
 
 extra_css:
-  - stylesheets/extra.css
+    - stylesheets/extra.css
 
 markdown_extensions:
-  - admonition                # note/warning callout boxes
-  - pymdownx.details
-  - pymdownx.superfences      # nested code/diagram blocks
-  - pymdownx.highlight
-  - pymdownx.tabbed:
-      alternate_style: true
-  - tables
-  - toc:
-      permalink: true         # clickable anchor on each heading
+    - admonition # note/warning callout boxes
+    - pymdownx.details
+    - pymdownx.superfences # nested code/diagram blocks
+    - pymdownx.highlight
+    - pymdownx.tabbed:
+          alternate_style: true
+    - tables
+    - md_in_html
+    - toc:
+          permalink: true # clickable anchor on each heading
+    - pymdownx.arithmatex:
+          generic: true
 
 extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/UBC-Rocket
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/UBC-Rocket
+
+extra_javascript:
+    - javascripts/mathjax.js
+    - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
