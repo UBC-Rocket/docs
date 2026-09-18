@@ -10,7 +10,7 @@
 | LiDAR PCB |   Gugan   |  High  | 04/10/2026  | 18/10/2026 |
 | Backplane |   Ken   |  High  | 11/10/2026  | 18/10/2026 |
 | Test Board |   Ken   |  Medium  | 11/10/2026  | 18/10/2026 |
-| Telemetry Radio GND PCB |   Annie   |  Medium  | 11/11/2026  | 18/10/2026 |
+| Custom Telemetry Radio GND Station PCB |   Annie   |  Medium  | 08/11/2026  | 15/11/2026 |
 | ESC |   Gugan   |  Medium  | 01/11/2026  | 15/11/2026 |
 | USB-C PD Charger DFT |   Gugan   |  Medium  | 01/11/2026  | 15/11/2026 |
 | RTK-GNSS GND PCB |   Nick   |  Low  | 01/11/2026  | 15/11/2026 |
