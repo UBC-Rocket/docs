@@ -17,7 +17,7 @@
 | 11 | Cell Voltages         | 6x     | 6    |
 | 12 | Fuel Gauge I2C        | 1×    | 2    |
 | 13 | Cell Monitoring I2C   | 1×    | 2    |
-| 14 | Camera I2C            | 1×    | 2    |
+| 14 | Camera UART            | 1×    | 2    |
 | 15 | Dynamixel TTL         | 1×    | 1    |
 | 15 | Alternating GND       | ~15x     | 15   |
 |   | **TOTAL**             |       | **66** |
@@ -76,11 +76,11 @@ Socket:
 |     Gate Driver_1 SPI_CS         | 33  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 34  | Gate Driver_1 nFault INT             |
 |     Gate Driver_1 SPI_SCLK         | 35  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 36  | Gate Driver_2 nFault INT             |
 |     GND         | 37  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 38  |  GND            |
-|     Gate Driver_1 SPI_MISO         | 39  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 40  | Camera I2C_SDA              |
-|     Gate Driver_1 SPI_MOSI         | 41  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 42  | Camera I2C_SCL             |
+|     Gate Driver_1 SPI_MISO         | 39  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 40  | Camera TX (Camera_TX to FC_RX)             |
+|     Gate Driver_1 SPI_MOSI         | 41  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 42  | Camera RX (Camera_RX to FC_TX)           |
 |     GND         | 43  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 44  | GND             |
-|     Gate Driver_2 SPI_CS         | 45  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 46  | ESC MCU1 UART_TX (FC_TX to ESC_RX)            |
-|     Gate Driver_2 SPI_SCLK         | 47  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 48  |  ESC MCU1 UART_RX (FC_RX to ESC_TX)            |
+|     Gate Driver_2 SPI_CS         | 45  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 46  | ESC MCU1 UART_TX (ESC_TX to FC_RX)            |
+|     Gate Driver_2 SPI_SCLK         | 47  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 48  |  ESC MCU1 UART_RX (ESC_RX to FC_TX)            |
 |     GND         | 49  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 50  | GND             |
 |     Gate Driver_2 SPI_MISO         | 51  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 52  |  Unassigned            |
 |     Gate Driver_2 SPI_MOSI         | 53  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 54  | +3V3             |
