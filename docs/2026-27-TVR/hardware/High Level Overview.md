@@ -6,12 +6,13 @@
 
 | PCB          |   Ownership   |  Priority  |  First Design Review Date | Design Freeze Date |
 |-------------:|:-------------:|:--------------:|:---------------------:|:-------------------|
-| Flight Controller |   Gugan   |  High  | 27/09/2026  | 18/10/2026 |
-| Backplane |   Ken   |  High  | 04/10/2026  | 18/10/2026 |
+| Flight Controller |   Gugan   |  High  | 04/10/2026  | 18/10/2026 |
+| LiDAR PCB |   Gugan   |  High  | 04/11/2026  | 18/10/2026 |
+| Backplane |   Ken   |  High  | 11/10/2026  | 18/10/2026 |
 | Test Board |   Ken   |  Medium  | 11/10/2026  | 18/10/2026 |
+| Telemetry Radio GND PCB |   Annie   |  Medium  | 11/11/2026  | 18/10/2026 |
 | ESC |   Gugan   |  Medium  | 01/11/2026  | 15/11/2026 |
 | USB-C PD Charger DFT |   Gugan   |  Medium  | 01/11/2026  | 15/11/2026 |
-| Telemetry Radio GND PCB |   Nick   |  Low  | 10/11/2026  | 18/10/2026 |
 | RTK-GNSS GND PCB |   Nick   |  Low  | 01/11/2026  | 15/11/2026 |
 
 Note: PCB Fabrication Order's are batched into two dates: 18/10/2026 and 15/11/2026. (Will be co-ordinated with COTS)
