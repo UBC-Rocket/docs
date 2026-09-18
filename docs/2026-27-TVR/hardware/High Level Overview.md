@@ -7,7 +7,7 @@
 | PCB          |   Ownership   |  Priority  |  First Design Review Date | Design Freeze Date |
 |-------------:|:-------------:|:--------------:|:---------------------:|:-------------------|
 | Flight Controller |   Gugan   |  High  | 04/10/2026  | 18/10/2026 |
-| LiDAR PCB |   Gugan   |  High  | 04/11/2026  | 18/10/2026 |
+| LiDAR PCB |   Gugan   |  High  | 04/10/2026  | 18/10/2026 |
 | Backplane |   Ken   |  High  | 11/10/2026  | 18/10/2026 |
 | Test Board |   Ken   |  Medium  | 11/10/2026  | 18/10/2026 |
 | Telemetry Radio GND PCB |   Annie   |  Medium  | 11/11/2026  | 18/10/2026 |
