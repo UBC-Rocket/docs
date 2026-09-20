@@ -61,8 +61,8 @@ Socket:
 |     V_CELL5       | 3   | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 4   | GND             |
 |     GND         | 5   | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 6   | +5V             |
 |     V_CELL4         | 7   | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 8   | GND             |
-|     V_CELL3         | 9   | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 10  |   ESC1 Temp Sensor I2C_SDA           |
-|     GND         | 11  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 12  |       ESC1 Temp Sensor I2C_SCL       |
+|     V_CELL3         | 9   | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 10  |   ESC Temp Sensor I2C_SDA           |
+|     GND         | 11  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 12  |       ESC Temp Sensor I2C_SCL       |
 |     V_CELL2         | 13  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 14  |   GND           |
 |     V_CELL1         | 15  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 16  |   Cell Monitoring I2C_SDA           |
 |     GND         | 17  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 18  |  Cell Monitoring I2C_SCL            |
