@@ -22,11 +22,11 @@
 
 - Two main options to do it, First - Dual RTK GNSS setup and use carrier phase difference to calculate yaw, Second - More traditional method using a magnetometer to sense earth's magnetic field and calculating yaw.
 
-- 
-
 ## Date: 15/09/2026
 
 - I have decided on a Board to Board connector, BB51-84AT-1-3HB 84 Pin - 1mm pitch, keyed, only about 1.5 CAD and decent stock in LCSC. Pin Assignment mostly done as well.
+
+- Added Pin Assignment document to wiki with preliminary pin assignment
 
 
 
