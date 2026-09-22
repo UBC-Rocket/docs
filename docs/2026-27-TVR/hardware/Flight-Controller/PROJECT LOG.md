@@ -80,6 +80,6 @@
 
 - Revised matching circuits, L / T / Pi circuits. Seems like L gives us lowest / fixed Q-factor but widest bandwidth and easiest to implement, Pi gives ability to control Q-factor with the extra capacitor and generally used for high impedence matching (>100R) and T gives the highest Q-factor, ability to control Q and narrow bandwidth, generaly used for high quality low impedence matching (<100R).
 
-- **Important:** General implementation of T will AC couple the RF line, so will not work for active antenna's. 
+- **Important:** General implementation of T will AC couple the RF line, so will not work for active antenna's or anything with bias tee. 
 
 - Decided on L matching for everything except pi for antenna matching, Semtech seems to recommend the same.
