@@ -93,9 +93,9 @@ Socket:
 |     ESC MCU2 UART_TX (ESC_TX to FC_RX)        | 67  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 68  | GND             |
 |     ESC MCU2 UART_RX (ESC_RX to FC_TX)         | 69  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 70  | +12V             |
 |     GND        | 71  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 72  | GND             |
-|     Unassigned         | 73  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 74  | +12V             |
-|     Unassigned         | 75  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 76  | GND             |
-|     Unassigned         | 77  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 78  | +12V             |
-|     Unassigned         | 79  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 80  | GND             |
+|     VBAT         | 73  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 74  | +12V             |
+|     GND         | 75  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 76  | GND             |
+|     VBAT         | 77  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 78  | +12V             |
+|     GND         | 79  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 80  | GND             |
 |     Unassigned         | 81  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 82  | +12V             |
 |     Unassigned         | 83  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 84  | GND             |
