@@ -97,3 +97,18 @@
 - Refer to "Microwave and RF Design III - Networks" in reference resources, full derivation is there and it is very good.
 
 - Important: Use a array of capacitors to create required matching capacitance if not standard value.
+
+- Interface schematic almost done
+
+- Flash Schematic done
+
+## Date: 23/09/2026
+
+- Learnt about RF PA vs gain blocks, gain blocks for ideally high impedence signals, prioritize signal conditioning over gain and they provide a max gain of about 30dB generally so suited if only a small amount of gain is needed. PA's maximise gain even at the cost of matching or signal conditioning, they are rare to find under like 10dB gain but can provide very high gain.
+
+- We only need like 10 to 15dB external gain as RFIC itself can do 22dB so gain block seems better choice and easy to find in LCSC.
+
+- Learnt about noise figure, general NF range for gain block IC's and signal chain noise figure analysis.
+
+- Looked through TI gain block products, decided on TRF37D73 gain block IC cause provides about 12.2dB gain at 915 MHz, noise figure of 3.25dB lowest TI offers for our use case, only 1.5 CAD and good stock in LCSC.
+
