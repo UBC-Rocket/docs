@@ -83,3 +83,17 @@
 - **Important:** General implementation of T will AC couple the RF line, so will not work for active antenna's or anything with bias tee. 
 
 - Decided on L matching for everything except pi for antenna matching, Semtech seems to recommend the same.
+
+- Seriously misunderstood matching circuit's design process and fundamental. Kept on confusing transmission line impedence and matching circuit's. **They are not same, very different theory**. Very stupid mistake.
+
+- **Important**: Fundamental principal of matching circuit is **that impedence of a series branch can be equal to impedence of a parallel branch at a frequency**. And imagine the circuit, the impedence of series branch is just R_Source + X_SeriesElement and impedence of parallel branch is just R_Load // X_ParallelElement. 
+
+- Q factor for reactive elements is defined as reactive power / resistance power (energy stored / energy lost). That is a key formula. Due to **maximum power transfer theoram, which states that for max power transfer, they need to be conjugate matched (to cancel out reactance), math leads to |Qs| = |Qp| = |Q| with Qs = Xs / Rs and Qp = Rp / Xp**. V^2/R in parallel case inverses the reactance and resistance terms. Finally **Q = (R_high / R_low - 1)^0.5**.
+
+- Important: **It is not possible to design a matching circuit wihout knowing source and load resistance's**.
+
+- **Design process for L matching circuit is just calculate the Q, and use Qs and Qp formula to solve for reactance, substitute frequency to get L and C values**. It will be a **unique set of values**.
+
+- Refer to "Microwave and RF Design III - Networks" in reference resources, full derivation is there and it is very good.
+
+- Important: Use a array of capacitors to create required matching capacitance if not standard value.
