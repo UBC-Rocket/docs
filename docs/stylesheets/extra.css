@@ -45,3 +45,10 @@ a.page-meta__author:hover {
   border-radius: 50%;
   vertical-align: middle;
 }
+
+/* Embedded PDF viewer */
+iframe[src$=".pdf"] {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  min-height: 80vh;
+}

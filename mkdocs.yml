@@ -45,6 +45,7 @@ plugins:
           fallback_to_build_date: true
 
 hooks:
+    - hooks/pdf_pages.py
     - hooks/page_meta.py
     - hooks/iframe_embed.py
 
