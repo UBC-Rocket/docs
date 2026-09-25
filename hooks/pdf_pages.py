@@ -38,15 +38,17 @@ def on_config(config):
         pdf_filename = quote(pdf_path.name)
         title = _pretty_title(pdf_path.name)
 
-        md_content = f"""{_GENERATED_TAG}
----
+        md_content = f"""---
 title: "{title}"
+pdf_page: true
 ---
+
+{_GENERATED_TAG}
 
 # {title}
 
-<iframe src="{pdf_filename}" width="100%" height="800px" style="border: 1px solid #ccc;">
-    <p><a href="{pdf_filename}">Download {title} (PDF)</a></p>
+<iframe src="../{pdf_filename}" width="100%" height="800px" style="border: 1px solid #ccc;">
+    <p><a href="../{pdf_filename}">Download {title} (PDF)</a></p>
 </iframe>
 """
         md_path.write_text(md_content, encoding="utf-8")
