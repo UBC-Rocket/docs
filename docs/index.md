@@ -5,7 +5,8 @@ by season and team, or the search bar at the top to find anything.
 
 ## Seasons
 
-- **2025-26** — current season
+- **2026-27** — current season
+- **2025-26** — archive
 - **2024-25** — archive
 
 ## How this is organized
