@@ -16,25 +16,38 @@ If you are adding new terms or acronyms, place them underneath the subheading co
 | BMS  | Battery Management System |
 
 ## C
+
 | Term | Description              |
 | ---- | ------------------------ |
 | COTS | Commercial off the Shelf |
 
 ## D
 
+| Term | Description          |
+| ---- | -------------------- |
+| DMA  | Direct Memory Access |
+
 ## E
+
+| Term | Description                 |
+| ---- | --------------------------- |
+| ESC  | Electronic Speed Controller |
+| EXIT | External Interrupt/Event Controller | 
 
 ## F
 
-| Term | Description       |
-| ---- | ----------------- |
-| FC   | Flight controller |
+| Term  | Description       |
+| ----  | ----------------- |
+| FC    | Flight controller |
+| FDCAN | Flexible Data-rate Controller Area Network |
 
 ## G
 
 | Term | Description            |
 | ---- | ---------------------- |
 | GCS  | Ground control station |
+| GNSS | Global Navigation Satellite System |
+| GPIO | General Purpose Input/Output |
 
 ## H
 
@@ -43,6 +56,7 @@ If you are adding new terms or acronyms, place them underneath the subheading co
 | Term | Description               |
 | ---- | ------------------------- |
 | IMU  | Inertial measurement unit |
+| I2C  | Inner-Integrated Circuit |
 
 ## J
 
@@ -50,35 +64,60 @@ If you are adding new terms or acronyms, place them underneath the subheading co
 
 ## L
 
-| Term | Description   |
-| ---- | ------------- |
-| LC   | Launch Canada |
+| Term  | Description   |
+| ----- | ------------- |
+| LC    | Launch Canada |
+| LiDAR | Light Detection and Ranging |
     
 ## M
 
 | Term | Description  |
 | ---- | ------------ |
 | MAG  | Magnetometer |
+| MCU  | Microcontroller Unit |
 
 ## N
+
+| Term  | Description   |
+| ----- | ------------- |
+| NVIC  | Nested Vectored Interrupt Controller |
 
 ## O
 
 ## P
 
+| Term | Description             |
+|------|------------------------ |
+| PCB  | Printed Circuit Board   |
+| PWM  | Pulse-Width Modulation  |
+
 ## Q
 
 ## R
 
+| Term | Description          |
+|------|--------------------- |
+| RTK  | Real-Time Kinematic  |
+
 ## S
+
+| Term | Description                  |
+|------|----------------------------- |
+| SPI  | Serial peripheral interface  |
 
 ## T
 
 | Term | Description             |
 |------|-------------------------|
+| TIM  | Timer | 
 | TVR  | Thrust vectoring rocket |
 
 ## U
+
+| Term | Description                                 |
+|------|-------------------------------------------- |
+| UART | Universal Asynchronous Receiver/Transmitter |
+| UWB  | Ultra-Wide Band | 
 
 ## V
 
