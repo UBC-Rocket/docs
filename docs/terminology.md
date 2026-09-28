@@ -32,7 +32,7 @@ If you are adding new terms or acronyms, place them underneath the subheading co
 | Term | Description                 |
 | ---- | --------------------------- |
 | ESC  | Electronic Speed Controller |
-| EXIT | External Interrupt/Event Controller | 
+| EXTI | External Interrupt/Event Controller | 
 
 ## F
 
