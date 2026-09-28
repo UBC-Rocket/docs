@@ -13,8 +13,12 @@ If you are adding new terms or acronyms, place them underneath the subheading co
 | Term | Description |
 | ---- | ----------- |
 | BARO | Barometer   |
+| BMS  | Battery Management System |
 
 ## C
+| Term | Description              |
+| ---- | ------------------------ |
+| COTS | Commercial off the Shelf |
 
 ## D
 
