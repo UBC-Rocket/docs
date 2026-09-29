@@ -112,4 +112,13 @@
 
 - Looked through TI gain block products, decided on TRF37D73 gain block IC cause provides about 12.2dB gain at 915 MHz, noise figure of 3.25dB lowest TI offers for our use case, only 1.5 CAD and good stock in LCSC.
 
-- Decided on SKY13370-374LF RF Switch for Tx/Rx switch and Antenna Diversity Switch - SPDT, 50R terminated, Dual Pin control, +39dBm IP1dB, Isolation of approx 35dB @ 915MHz - very decent 
+- Decided on SKY13370-374LF RF Switch for Tx/Rx switch and Antenna Diversity Switch - SPDT, 50R terminated, Dual Pin control, +39dBm IP1dB, Isolation of approx 35dB @ 915MHz - very decent
+
+- Finished USB-C PWR schematic
+
+- Ken had a idea to flash the MCU over USB using STM Bootloader but david doesnt prefer that. So sticking with ST-Link and no data on USB-C.
+
+- Some progress on MCU Schematic.
+
+## Date 24/09/2026
+
