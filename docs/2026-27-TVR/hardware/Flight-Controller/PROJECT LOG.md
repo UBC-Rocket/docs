@@ -125,3 +125,15 @@
 - Took day off, so all day worked on FC.
 
 - 
+
+## Date 26/09/2026
+
+- Some progress on schematics
+
+- Spent most of time in preperation for build day
+
+## Date 27/09/2026
+
+- Had a discussion with ken on all connectors on backplane, and decided on MaUWB, RFD and LA_PWM (DNP) on FC and rest on backplane and eventually on ESC.
+
+- Some progress on FC schematic and ioc. Getting there
