@@ -122,3 +122,6 @@
 
 ## Date 24/09/2026
 
+- Took day off, so all day worked on FC.
+
+- 
