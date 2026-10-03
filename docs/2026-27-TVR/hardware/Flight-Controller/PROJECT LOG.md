@@ -124,8 +124,6 @@
 
 - Took day off, so all day worked on FC.
 
-- 
-
 ## Date 26/09/2026
 
 - Some progress on schematics
