@@ -4,15 +4,16 @@ If you are adding new terms or acronyms, place them underneath the subheading co
 
 ## A
 
-| Term  | Description   |
-| ----- | ------------- |
-| ACCEL | Accelerometer |
+| Term  | Description                                                                              |
+| ----- | ---------------------------------------------------------------------------------------- |
+| ACCEL | Accelerometer                                                                            |
+| AN    | When talking about firmware, this could refer to application notes (e.g. AN1234, AN5286) |
 
 ## B
 
-| Term | Description |
-| ---- | ----------- |
-| BARO | Barometer   |
+| Term | Description               |
+| ---- | ------------------------- |
+| BARO | Barometer                 |
 | BMS  | Battery Management System |
 
 ## C
@@ -29,25 +30,25 @@ If you are adding new terms or acronyms, place them underneath the subheading co
 
 ## E
 
-| Term | Description                 |
-| ---- | --------------------------- |
-| ESC  | Electronic Speed Controller |
-| EXTI | External Interrupt/Event Controller | 
+| Term | Description                         |
+| ---- | ----------------------------------- |
+| ESC  | Electronic Speed Controller         |
+| EXTI | External Interrupt/Event Controller |
 
 ## F
 
-| Term  | Description       |
-| ----  | ----------------- |
-| FC    | Flight controller |
+| Term  | Description                                |
+| ----- | ------------------------------------------ |
+| FC    | Flight controller                          |
 | FDCAN | Flexible Data-rate Controller Area Network |
 
 ## G
 
-| Term | Description            |
-| ---- | ---------------------- |
-| GCS  | Ground control station |
+| Term | Description                        |
+| ---- | ---------------------------------- |
+| GCS  | Ground control station             |
 | GNSS | Global Navigation Satellite System |
-| GPIO | General Purpose Input/Output |
+| GPIO | General Purpose Input/Output       |
 
 ## H
 
@@ -56,7 +57,7 @@ If you are adding new terms or acronyms, place them underneath the subheading co
 | Term | Description               |
 | ---- | ------------------------- |
 | IMU  | Inertial measurement unit |
-| I2C  | Inner-Integrated Circuit |
+| I2C  | Inner-Integrated Circuit  |
 
 ## J
 
@@ -64,23 +65,23 @@ If you are adding new terms or acronyms, place them underneath the subheading co
 
 ## L
 
-| Term  | Description   |
-| ----- | ------------- |
-| LC    | Launch Canada |
+| Term  | Description                 |
+| ----- | --------------------------- |
+| LC    | Launch Canada               |
 | LiDAR | Light Detection and Ranging |
     
 ## M
 
-| Term | Description  |
-| ---- | ------------ |
-| MAG  | Magnetometer |
+| Term | Description          |
+| ---- | -------------------- |
+| MAG  | Magnetometer         |
 | MCU  | Microcontroller Unit |
 
 ## N
 
-| Term  | Description   |
-| ----- | ------------- |
-| NVIC  | Nested Vectored Interrupt Controller |
+| Term | Description                          |
+| ---- | ------------------------------------ |
+| NVIC | Nested Vectored Interrupt Controller |
 
 ## O
 
@@ -95,9 +96,10 @@ If you are adding new terms or acronyms, place them underneath the subheading co
 
 ## R
 
-| Term | Description          |
-|------|--------------------- |
-| RTK  | Real-Time Kinematic  |
+| Term | Description                                                                              |
+| ---- | ---------------------------------------------------------------------------------------- |
+| RTK  | Real-Time Kinematic                                                                      |
+| RM   | When talking about firmware, this could refer to reference manuals (e.g. RM1234, RM0399) |
 
 ## S
 
@@ -108,16 +110,16 @@ If you are adding new terms or acronyms, place them underneath the subheading co
 ## T
 
 | Term | Description             |
-|------|-------------------------|
-| TIM  | Timer | 
+| ---- | ----------------------- |
+| TIM  | Timer                   |
 | TVR  | Thrust vectoring rocket |
 
 ## U
 
 | Term | Description                                 |
-|------|-------------------------------------------- |
+| ---- | ------------------------------------------- |
 | UART | Universal Asynchronous Receiver/Transmitter |
-| UWB  | Ultra-Wide Band | 
+| UWB  | Ultra-Wide Band                             |
 
 ## V
 
