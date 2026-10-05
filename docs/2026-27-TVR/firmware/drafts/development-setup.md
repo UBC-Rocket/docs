@@ -17,7 +17,7 @@ building the Ulysses firmware.
     - [Installing CMake](#installing-cmake)
   - [Setting up VS Code](#setting-up-vs-code)
     - [Installing VS Code](#installing-vs-code)
-    - [Installing recommended extensions](#installing-recommended-extensions)
+    - [Installing extensions](#installing-extensions)
   - [Adding debugging support to VS Code](#adding-debugging-support-to-vs-code)
     - [Installing pyOCD](#installing-pyocd)
     - [Fixing pyOCD USB permissions for Linux](#fixing-pyocd-usb-permissions-for-linux)
@@ -129,11 +129,17 @@ Follow the steps provided by the official guide on
 
 [setting_up_vscode]: https://code.visualstudio.com/docs/setup/setup-overview
 
-### Installing recommended extensions
+### Installing extensions
 
 > [!important]
 > Unless you have your own working extension setup, you should definitely
 > install these recommended extensions.
+
+> [!important]
+> The Cortex-Debug extension on the VSCode marketplace is very outdated.
+> Please download the latest pre-release for the extension from their
+> [release page][cortex_debug_release_page]. To install this extension,
+> see the following [VSCode guide for installing VSIX][vscode_install_vsix].
 
 To view the recommended extensions, open the VS Code Command Palette
 (`Ctrl+Shift+P` or `Cmd+Shift+P`) and run the
@@ -144,6 +150,9 @@ button (displayed as a cloud icon).
 
 Alternatively, you can install the recommended extensions manually using the
 extension identifiers listed in `.vscode/extensions.json`.
+
+[cortex_debug_release_page]: https://github.com/Marus/cortex-debug/releases
+[vscode_install_vsix]: https://code.visualstudio.com/docs/configure/extensions/extension-marketplace#_install-from-a-vsix
 
 ## Adding debugging support to VS Code
 
@@ -207,7 +216,7 @@ exact DFP name using
 pyocd pack find <family>
 ```
 
-For example, for a `STM32H745ZIT6` MCU, you can use the command
+For our `STM32H745ZIT6` MCU, you can use the command
 
 ```shell
 pyocd pack find STM32H745Z
