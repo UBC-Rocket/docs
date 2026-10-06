@@ -56,7 +56,9 @@
 
 - Consider optical flow sensor for position hold (Considering for phase 2)
 
-- Add a SD card
+- Add a SD card to store raw sensor data
+
+- Design freeze date for flight controller is 18/05/26
 
 ### Battery:
 
