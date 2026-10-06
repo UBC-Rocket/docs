@@ -69,3 +69,128 @@
 - no conclusion on 12s lipo discussion
 
 ## TVR Mech
+## Roll Control System
+
+- Action item proposed by Dr. Maddison: consider a roll control system
+
+- Disposition is to not deal with it during this design due to the limited mass budget, but look into it for a future design
+
+## Linear Actuator Research
+
+- Gugan needs to research a properly specified linear actuator
+
+- Check understanding regarding board space for the linear actuators
+
+## GitHub
+
+- Have a ticket request system to grant people access to repos and CAD files for editing
+
+- Add proper checks for assemblies
+
+- People need to get permission to make changes
+
+- Have a single frozen design
+
+- Have edits branch off of the frozen design, therefore edits are only ever changing the branch off of the frozen design
+
+- After the dev design has been — **[Note incomplete]**
+
+- Add people who have admin access as reviewers and allow reviewers to have admin access
+
+- Add tags
+
+- Work with Jason on version-related control
+
+## Current Design
+
+### Backlash
+
+- Backlash is the biggest problem
+
+- Need to measure backlash
+
+- Testing method: measure backlash using a pen and grid
+
+### Indirect
+
+- Higher gear ratio
+
+- Need to measure backlash
+
+### Direct
+
+- Attach directly and then move components to rectify the center of mass
+
+- Frame would possibly need to expand
+
+- Needs a design
+
+- Need to remeasure backlash
+
+- Add a "dead mass" to help move the center of mass
+
+### Battery Tangent
+
+- Decrease
+
+### Thrust
+
+- Need more thrust ☹️
+
+## Next Week Goal
+
+### New Gimbal
+
+- Higher gear ratio to reduce backlash
+
+- Buy gears (McMaster-Carr)
+
+- Print resin gears
+
+- Direct Drive
+
+
+### New Legs
+
+- New leg mounts to main frame, just screw it in, dampening system can be explored later on. Look at Open Source Projects.
+
+## Other Current Design Notes
+
+- There is wiggle in that one screw component that breaks (Shoulder bolt holding the lower seervo mount)
+
+- Look into thrust-vectoring drones that solve this given problem
+
+- Need more external research into solved servo-driven designs:
+  - What have people done?
+  - Why has it worked?
+  - How can we copy and integrate it?
+
+## Leg System
+
+- Have we looked at other people's designs?
+
+- Do we have more leg designs?
+
+- Get more leg designs underway (**urgent**)
+
+- More consideration of stress concentrations in the next design
+
+## Batteries
+
+- Stop plate
+
+- Move away from horizontal batteries
+
+- Look at open-source models to save ourselves the trouble
+
+- Get a better design than the Velcro strap
+
+- Look at rubber on nylon nuts to stop vertical movement
+  
+- COM should not change after each battery swap
+
+## Important
+
+- **NEED TO MEASURE THE BACKLASH**
+
+- A quick way would be to attach a pencil to the thrust cage and, while the servos are locked, attempt to move the servo. The pencil will mark how much backlash is present, which we can then measure
