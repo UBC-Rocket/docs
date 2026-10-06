@@ -2,31 +2,37 @@
 
 ## Issues Last Year
 
-1. Not enough time for proper testing and validation 
+- Not enough time for proper testing and validation 
 
 **Solution:** Quarterly design plan with design freeze date at least before 1.5 months
 
-2. Sensor selection did not cover all the parameter data needed by controls like baro's resolution is too low to detect takeoff and landing, GNSS resolution too low for 3D mapping etc.
+
+- Sensor selection did not cover all the parameter data needed by controls like baro's resolution is too low to detect takeoff and landing, GNSS resolution too low for 3D mapping etc.
 
 **Solution:** LiDAR to detect takeoff and landing, RTK-GNSS for high resolution 3D surveying and UWB for indoor 3D Mapping
 
-3. Almost no sensor validation
+
+- Almost no sensor validation
 
 **Solution:** Firmware to do IMU and Baro raw data validation as soon as possible, MAG noise characterisation as well.
 
-4. Didn’t measure accurate gimbal backlash (eye balled it)
+
+- Didn’t measure accurate gimbal backlash (eye balled it)
 
 **Solution:** TVR Mech to measure backlash of dynamixel - direct drive and indirect drive
 
-5. No variable thrust control yet, just static
+
+- No variable thrust control yet, just static
 
 **Solution:** Differential thrust control will be implemented, active controlled fins explored as well
 
-6. Horizontal Battery mounting kept on shifting drone's COM
+
+- Horizontal Battery mounting kept on shifting drone's COM
 
 **Solution:** Vertical battery mounting, aligned across central axis
 
-7. We lost lots of points for lack of validation / documentation (justifying decisions)
+
+- We lost lots of points for lack of validation / documentation (justifying decisions)
 
 **Solution:** Wiki is set up and being actively used by TVR
 
