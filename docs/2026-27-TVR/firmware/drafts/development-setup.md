@@ -173,7 +173,7 @@ tool. However, I would also recommend you consider package managers like [uv][uv
 If you are using `uv`, you can install pyOCD using the command
 
 ```shell
-uv install tool pyocd
+uv tool install pyocd
 ```
 
 To verify that you installed pyOCD correctly, run the following command
