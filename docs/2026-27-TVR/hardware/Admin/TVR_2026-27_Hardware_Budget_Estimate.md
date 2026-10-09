@@ -67,8 +67,8 @@ Not a single board, but required to build, assemble, and operate the stack. Thes
 | Item | Link | Qty | Cost |
 |:-----|:-----|:---:|-----:|
 | Solder | [Solder (Amazon)](https://www.amazon.ca/TORLAX-63-37-Lead-Solder-0-3mm/dp/B0DS8L1YZF/) | 3 | 45.00 CAD |
-| Thin Flux | [Thin Flux (AliExpress)](https://www.aliexpress.com/item/1005012924642624.html) | 1 | 40.99 CAD |
-| Tack Flux | [Tack Flux (AliExpress)](https://www.aliexpress.com/item/1005012924642624.html) | 1 | 15.28 CAD |
+| Thin Flux | [Thin Flux (AliExpress)](https://www.aliexpress.com/item/1005012924642624.html) | 10 | 40.99 CAD |
+| Tack Flux | [Tack Flux (AliExpress)](https://www.aliexpress.com/item/1005012924642624.html) | 5 | 31.5 CAD |
 | Solder Paste | [Solder Paste (AliExpress)](https://www.aliexpress.com/item/1005004867214128.html) | 5 | 39.95 CAD |
 | Titanium Tweezers | [Titanium Tweezers (AliExpress)](https://www.aliexpress.com/item/1005012470050337.html) | 2 | 19.72 CAD |
 | Ceramic Tweezers | [Ceramic Tweezers (AliExpress)](https://www.aliexpress.com/item/1005012470050337.html) | 1 | 15.28 CAD |

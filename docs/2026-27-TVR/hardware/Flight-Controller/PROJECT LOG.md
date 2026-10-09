@@ -134,4 +134,71 @@
 
 - Had a discussion with ken on all connectors on backplane, and decided on MaUWB, RFD and LA_PWM (DNP) on FC and rest on backplane and eventually on ESC.
 
+- Question on battery connector harness still remains undecided. Likely have to use three parallel XT60 like before until custom ESC is ready
+
 - Some progress on FC schematic and ioc. Getting there
+
+## Date 02/09/2026
+
+- Finished RFD connector schematic.
+
+- Read up on CAN, termination etc..
+
+- Going with TCAN1044 transceiver cause FDCAN, standard features, good stock and cheap in LCSC Finished CAN schematic
+
+- Added a high level documentation schematic as well. Did some stuff for asthetics
+
+- Going with MMC5983MA for mag. Same as previous FC, best i could find as well. Finished mag schematic
+
+- Testing planned for mag and some mu metal shielding can help
+
+## Date 03/09/2026
+
+- Except radio, all the schematics are done.
+
+- Started component placement, antenna interfernace reduction is implement by placing Radio antenna on end and GNSS antenna on the other end. 
+
+- Had a discussion with controls on IMU placement, consenses was to place it as close to COG as possible which in this case is just COM and all three very close to each other.
+
+- All RF is on bottom layer for some isolation.
+
+- Added RF shield footprint to our library, going wiht 16mm * 16mm approx for now.
+
+- Updated LiDAR PCB to vertical JST as well
+
+- Updated mezzanine pinout to make routing easier for backplane
+
+## Date 04/09/2026
+
+- Had system design sync for FC and backplane, got cooked
+
+Main suggestions are : 
+
+Sensor raw data validation
+
+Antenna interferance was raised, 915Mhz and GNSS Antenna is placed as far way as possible for some isolation
+
+Refer RC drones / open source designs for sensor selection, especially heading
+
+Consider optical flow sensor for position hold (Considering for phase 2)
+
+Add a SD card to store raw sensor data
+
+Design freeze date for flight controller is 18/05/26
+
+- Some progress on radio schematic, started adding the matching network and and bias tee components
+
+- Made a mistake / better way to do it, realized that Samsung and Yageo both provide parasitics data for thier passives. Going to use the manufacturer parasitic's data from now on, not simsurf's. Parasitics varies wildly between manufacturers somehow. My bad.
+
+- Using reactance at the signal frequency in matching network calc hereafter, not pure theoritical calc. Basically calculate the required reactance and use sim data to find caps based on it
+
+- Played around with yageo's and samsung's sim tool, very cool. Re did all the calc with manufacturer's data and updated component values. 
+
+- Updated matching values for RFIC RFO to gain block is 11nH and 16pF. 
+
+- Cap for bias tee needs to be updated, target < 5 ohms for cap from now on. Updated bias tee values are 220nH and 33pF. I need to do calculations properly next time. Very stupid mistakes.
+
+- Added footprints for RF switch and gain block.
+
+- Gain block schematic is done
+
