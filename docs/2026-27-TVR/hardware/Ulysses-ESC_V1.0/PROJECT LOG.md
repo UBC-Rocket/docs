@@ -1,4 +1,4 @@
-# ESC Project Log
+# Ulysses-ESC_1.0 Project Log
 
 ## DATE: August 9, 2026
 
