@@ -202,3 +202,26 @@ Design freeze date for flight controller is 18/05/26
 
 - Gain block schematic is done
 
+## Date 10/09/2026
+
+- Finished SD-CARD schematic, added some missing bulk caps and did a schematic review. Looks okay for now
+
+- Finalized ioc file after consulting with david
+
+- A lot of soldering practice, getting better but need more practice
+
+## Date 11/09/2026
+
+- Almost down with component placement, quick summary is all RF (GNSS and Radio) on bottom layer, opposite corners for max seperation. All IMU centered around COG / COM and close to each other in bottom layer. Buzzer on top and mag on top as well but opposite side for max seperation. Radio SMA's 45 deg rotated to make routing easier and all SMA on top layer, vertical and THT. Everything that needs 12V is on one corner, near to mezzanine 12V, plan is to use a single polygon for 12V. CAN on bottom, cause space in bottom.
+
+- JST's are too bulky, so switching to picolock series. 1.5mm, 3A, Suprisingly stocked and very cheap in LCSC.
+
+- Jason asked a good question about load line matching, realized that RFO impedence will change based on transmit power so shoudnt it be load line matched? quick reserach suggests that ideally yes but still it is not done often cause matching to highest power still works cause below that it will have power loss but will be small and the power dependence impedence is only a part of total impedence so effiency will drop down to like 70% at lower power.
+
+## Date 12/09/2026
+
+- Finished high level component placement and most low level component placement
+
+- Do not know why but board does not look pretty at all, not like the picture i had in mind. Feels like something is missing.
+
+- Can shrink the board down by 5-10mm, maybe that will help
