@@ -1,4 +1,4 @@
-# Flight-Controller Project Log
+# Ulysses-FC_V3.0 Project Log
 
 ## Date: 13/09/2026
 
