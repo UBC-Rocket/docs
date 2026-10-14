@@ -225,3 +225,13 @@ Design freeze date for flight controller is 18/05/26
 - Do not know why but board does not look pretty at all, not like the picture i had in mind. Feels like something is missing.
 
 - Can shrink the board down by 5-10mm, maybe that will help
+
+## Date 13/09/2026
+
+- Most of fine component placement done, ready for routing.
+
+- Moved CAN to bottom cause need some straight space, buzzer to a corner for isolation from all sensors, Baro on corner and Mag on another for better use of space, silkscreen done with logo, GNSS Front end layout with shielding and stiching vias plus GND polygon around it in all layers and vias between the GND pads as well for shorten return path.
+
+- Moved a few connectors around as well
+
+- Looks better now, better use of space, more consistent spacing and better placement.
