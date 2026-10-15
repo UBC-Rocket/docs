@@ -235,3 +235,15 @@ Design freeze date for flight controller is 18/05/26
 - Moved a few connectors around as well
 
 - Looks better now, better use of space, more consistent spacing and better placement.
+
+## Date 14/09/2026
+
+- Reviewed yesterday's work, looks okay for now
+
+- Looked through open sourced designs similar to mine, especially RF front ends. Still wondering if a SAW/LNA or atleast a SAW needed for GNSS cause of radio.
+
+- Telemega (GNSS Transmitter) schematic is very good resource, they do use a SAW on GNSS. I am adding atleast a SAW on GNSS, still thinking if LNA is needed.
+
+- Decided on SAFEA1G58KA0F00R15 for SAW, made for L1/GLONASS (Faster RTK fix due to access to GLONASS satellites as well), 1.6dB insertion loss, 32dB min rejection @ 915MHz, good stock and suprisingly very cheap in LCSC.
+
+- Prefer QPQ1060 cause it is temperature compensated but LCSC does not stock Qorvo SAW's. Sad.
