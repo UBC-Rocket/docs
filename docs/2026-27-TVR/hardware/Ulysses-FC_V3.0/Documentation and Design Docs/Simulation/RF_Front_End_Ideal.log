@@ -1,6 +1,6 @@
 LTspice 26.0.1 for Windows
 Circuit: C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\RF_Front_End_Ideal.net
-Start Time: Mon Oct 19 22:36:03 2026
+Start Time: Mon Oct 19 22:54:40 2026
 solver = Normal
 Maximum thread count: 24
 tnom = 27
@@ -8,7 +8,7 @@ temp = 27
 method = trap
 .OP point found by inspection.
 .OP point found by inspection.
-Total elapsed time: 0.057 seconds.
+Total elapsed time: 0.052 seconds.
 
 Files loaded:
 C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\RF_Front_End_Ideal.net

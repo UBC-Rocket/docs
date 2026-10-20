@@ -1,18 +1,16 @@
 LTspice 26.0.1 for Windows
 Circuit: C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\RF_Front_End_Real.net
-Start Time: Mon Oct 19 22:46:15 2026
+Start Time: Mon Oct 19 23:07:41 2026
 solver = Normal
 Maximum thread count: 24
 tnom = 27
 temp = 27
 method = trap
-WARNING: Node l4_0603_8.7nh:6 is floating.
-
 Direct Newton iteration failed to find operating point.
 Starting Gmin stepping
 Gmin stepping succeeded in finding the operating point.
 
-Total elapsed time: 0.136 seconds.
+Total elapsed time: 0.132 seconds.
 
 Files loaded:
 C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\RF_Front_End_Real.net
