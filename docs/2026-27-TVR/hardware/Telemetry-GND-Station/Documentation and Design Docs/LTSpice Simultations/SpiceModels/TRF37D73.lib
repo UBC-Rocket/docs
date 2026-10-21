@@ -1,0 +1,77 @@
+* TRF37D73
+*****************************************************************************
+* (C) Copyright 2012 Texas Instruments Incorporated. All rights reserved.                                            
+*****************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.
+** TI and its licensors and suppliers make no warranties, either expressed
+** or implied, with respect to this model, including the warranties of 
+** merchantability or fitness for a particular purpose.  The model is
+** provided solely on an "as is" basis.  The entire risk as to its quality
+** and performance is with the customer.
+*****************************************************************************
+*
+** Released by: WEBENCH(R) Design Center, Texas Instruments Inc.
+* Part: TRF37D73
+* Date: 06/12/15
+* Model Type: All In One
+* Simulator: ADS
+* Simulator Version: Advanced Design System 2014.01
+* EVM Order Number: N/A 
+* EVM Users Guide: N/A
+* Datasheet: SLASE43 - May 2014
+*
+* Model Version: 1.0
+*
+*****************************************************************************
+*
+* Updates:
+*
+* Version 1.0 : Release to Web  
+*
+*****************************************************************************
+* Notes: 
+* This model reflects the following data sheet specs at 2GHz:
+* 1. Input and output return loss
+* 2. Noise Figure
+* 3. Gain
+* 4. OIP1dB
+* The model also reflects the published specs for quiescent current at 3.3V.
+* This model does not support the power-down feature.
+*****************************************************************************
+*
+*
+*
+.SUBCKT TRF37D73 RFOUT RFIN VCC GRND
+E_E1         OUT_FILT GRND N97973 N97817 1
+R_R7         VCC GRND  750 
+R_R6         N97973 N98153  50 
+C_C2         0 N97973  1.4p
+X_U3         IN_OSTG GRND GRND GRND RFOUT VCC GRND I_LIM_VC_D 
+L_L1         OUT_FILT IN_OSTG  1nH  
+C_C6         0 IN_OSTG  1.0pF
+E_E2         N98153 0 N97667 0 0.75
+E_E3         0 N97811 0 N97667 -0.25
+R_R8         0 IN_OSTG  25
+R_R3         N97817 N97811  50 
+E_E4         N97667 GRND RFIN GRND -23
+C_C1         GRND N97817  60p
+R_R4         GRND N97847  30 
+R_R9         GRND RFIN  40.9
+C_C5         N97847 RFOUT  10u
+.ENDS
+**
+**
+.SUBCKT I_LIM_VC_D INP INN OUTP VC OUTN VCC VEE
+.PARAM I0 = 0.051
+.PARAM Ipk = 0.1125
+.PARAM G1 = 0.04
+.PARAM G3 = 200u
+* Test for min & max power supplies, disable forward gain if out of range
+E1 N1 0 VALUE = {0.5*(1 + SGN(V(VCC,VEE) - 3))}
+E2 N2 0 VALUE = {0.5*(1 + SGN(3.5 - V(VCC,VEE)))}
+E3 N3 0 VALUE = {V(N1)*V(N2)}
+GOUT OUTP OUTN VALUE = {MAX(MIN(V(N3)*(G1*V(INP,INN) - G3*PWRS(V(INP,INN),3)),Ipk),-Ipk)}
+GIDC OUTP OUTN VALUE = {-I0}
+.ENDS
+**
+**
