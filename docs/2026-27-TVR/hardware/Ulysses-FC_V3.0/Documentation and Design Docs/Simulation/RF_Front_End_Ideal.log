@@ -1,19 +1,6 @@
 LTspice 26.0.2 for Windows
 Circuit: C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\RF_Front_End_Ideal.net
-Start Time: Tue Oct 20 10:52:43 2026
-solver = Normal
-Maximum thread count: 22
-tnom = 27
-temp = 27
-method = trap
-Direct Newton iteration failed to find operating point.
-Starting Gmin stepping
-Gmin stepping succeeded in finding the operating point.
-
-Total elapsed time: 0.082 seconds.
-
-Files loaded:
-C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\RF_Front_End_Ideal.net
-C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\SKY13370_Vctrl_3000mV_RFC_J1_25C.inc
-C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\TRF37D73.inc
-
+Start Time: Fri Oct 23 11:42:49 2026
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\RF_Front_End_Ideal.net(19): This sub-circuit name is not defined.
+X§U2 N003 N008 +3V3 0 TRF37D73 ;§pnba RFOUT)RFIN)VCC)GRND
+                      ^^^^^^^^
