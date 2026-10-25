@@ -1,6 +1,6 @@
 LTspice 26.0.1 for Windows
 Circuit: C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\RF_Front_End_Real.net
-Start Time: Sat Oct 24 23:03:44 2026
+Start Time: Sat Oct 24 23:26:55 2026
 solver = Normal
 Maximum thread count: 24
 tnom = 27
@@ -10,7 +10,7 @@ Direct Newton iteration failed to find operating point.
 Starting Gmin stepping
 Gmin stepping succeeded in finding the operating point.
 
-Total elapsed time: 0.547 seconds.
+Total elapsed time: 0.606 seconds.
 
 Files loaded:
 C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\RF_Front_End_Real.net
@@ -31,6 +31,6 @@ C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\D
 C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\LQW18AN2N4C8ZD_0603_2.4nH_Wire-Wound.mod
 C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\TRF37D73.lib
 C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GCM1885C2A100JA16_0603_C0G_10pF_100V.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GJM1555C1H2R6CB01_0402_C0G_2.6pF_50V.mod
+C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GJM1555C1H2R5WB01_0402_C0G_2.5pF_50V.mod
 C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\SKY13370_Vctrl_3000mV_RFC_J1_25C.inc
 
