@@ -10,7 +10,7 @@ X§C6_0603_3.3pF N012 0 GRM1885C1H3R3CA01_DC0V_25degC ;§pnba A)B
 X§L4_0603_12nH N005 N006 LQW18AN12NG00 ;§pnba A)B
 X§C4_0603_33pF N005 N004 CL10C330JB8NNN_Precise_DC0V_25degC ;§pnba A)B
 V1 N007 0 AC 1 Rser=15.5
-X§C7_0603_2.5pF N005 0 GRM1885C1H2R5WA01_DC0V_25degC ;§pnba A)B
+X§C7_0402_2.6pF N005 0 GJM1555C1H2R6CB01_DC0V_25degC ;§pnba A)B
 R2 RF_ANT 0 50
 X§C9_0603_10pF N011 N003 GCM1885C2A100JA16_DC0V_25degC ;§pnba A)B
 X§U1 N012 N004 NC_01 0 SKY13370_Vctrl_3000mV_RFC_J1_25C ;§pnba 1)2)3)4
@@ -24,8 +24,9 @@ X§C13_0603_4.7pF N009 0 GCM1885C1H4R7CA16_DC0V_25degC ;§pnba A)B
 X§L6_0603_2.4nH N008 N009 LQW18AN2N4C8Z ;§pnba A)B
 L7 N007 N008 1.88n Rser=1m
 V2 +3V3 0 3.3
-X§C8_0603_2.5pF N006 0 GRM1885C1H2R5WA01_DC0V_25degC ;§pnba A)B
-X§C9_0603_5.3pF RF_ANT N006 GRM1885C1H5R3BA01_DC0V_25degC ;§pnba A)B
+X§C8_0402_2.6pF N006 0 GJM1555C1H2R6CB01_DC0V_25degC ;§pnba A)B
+X§C9_0603_5.6pF RF_ANT N006 GRM1885C1H5R6BA01_DC0V_25degC ;§pnba A)B
+C10_TVS RF_ANT 0 0.24p
 .ac dec 1000 100k 5G
 .net I(R2) V1
 .include Spice_Models/CL10C330JB8NNN_0603_C0G_33pF_50V.mod
@@ -34,7 +35,7 @@ X§C9_0603_5.3pF RF_ANT N006 GRM1885C1H5R3BA01_DC0V_25degC ;§pnba A)B
 .include Spice_Models/CL10C101JB8NNN_0603_C0G_100pF_50V.mod
 .include Spice_Models/LQW18AS1N6J00_0603_1.6nH_Wire-Wound.mod
 .include Spice_Models/GRM1885C1H3R3CA01_0603_C0G_3.3pF_50V.mod
-.include Spice_Models/GRM1885C1H5R3BA01_0603_C0G_5.3pF_50V.mod
+.include Spice_Models/GRM1885C1H5R6BA01_0603_C0G_5.6pF_50V.mod
 .include Spice_Models/LQW15AN7N2G8_0603_7.2nH_Wire-Wound.mod
 .include Spice_Models/GRM1885C1H2R0BA01_0603_C0G_2pF_50V.mod
 .include Spice_Models/GRM1885C1H2R5WA01_0603_C0G_2.5pF_50V.mod
@@ -50,7 +51,9 @@ X§C9_0603_5.3pF RF_ANT N006 GRM1885C1H5R3BA01_DC0V_25degC ;§pnba A)B
 * 2nd Harmonic Notch Filter:\n \nNotch Frequency = 1.83GHz\n \n1.83 * 10^(9) = 1 / (2 * 22/7 * (L * C)^0.5)\n \nL * C = 7.557 * 10^(-21)\n \nAfter tuning with real spice models, verified notch at 1.827GHz with -24.5dB attenuation.\n(Refer to 2nd_Harmonic_Band_Reject_Filter_Real)\n \nZout of 2nd Harmonic filter is 50.408 + 13.88i R
 .include Spice_Models/GCM1885C2A100JA16_0603_C0G_10pF_100V.mod
 * Cancelling out the reactance with C9:\n \nX_C = -13.88R\n \nChoosen: X_C = -13.9R @ 915MHz
-* 1st Harmonic Low Pass Butterworth Filter:\n \nCorner Frequency = 1.8GHz\n \n1.8 * 10^(9) = 1 / (22/7 * (L * C)^0.5)\n \n|L * C| = 3.124 * 10^(−20)\n \nX_L / X_C = 4\n \nImpedence: X_L * X_C = 2500\n \n4 * X_C^2 = 2500\n \nX_C = 25R\n \nX_L = 100R\n \nNeeded to push corner freq above 915MHz to keep 915MHz inside pass band and around 50R\nAfter tuning here, went with 12nH
+* 1st Harmonic Low Pass Butterworth Filter:\n \nCorner Frequency = 1.8GHz\n \n1.8 * 10^(9) = 1 / (22/7 * (L * C)^0.5)\n \n|L * C| = 3.124 * 10^(−20)\n \nX_L / X_C = 4\n \nImpedence: X_L * X_C = 2500\n \n4 * X_C^2 = 2500\n \nX_C = 25R\n \nX_L = 100R\n \nNeeded to push corner freq above 915MHz to keep \n915MHz inside pass band and around 50R\n \nAfter tuning freq response and real part of impedence\nto be near 50R, went with 12nH and 2.6pF
+* C9: to cancel out +31.21j from pi filter,\n \nTargeting X_C = -31.21j\n \nAfter tuning, went with 5.1pF
+.include Spice_Models/GJM1555C1H2R6CB01_0402_C0G_2.6pF_50V.mod
 * Library below included based on ModelFile attribute of instance X§U1 (C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\SKY13370_Vctrl_3000mV_RFC_J1_25C.asy)
 .lib SKY13370_Vctrl_3000mV_RFC_J1_25C.inc
 .backanno
