@@ -8,3 +8,10 @@
 - Repo layout (pulled submodules: helios protos + helios python sdk)
 - Decide on tech stack
 - Install packages for TypeScript, React and TailwindCSS for frontend
+
+## DATE: October 25, 2026 
+- Understanding the dashboard/frontend layout
+- Create Panel Component
+
+## DATE: October 26, 2026 
+- Rebase the #3 commit for Panel Component
