@@ -138,7 +138,7 @@
 
 - Some progress on FC schematic and ioc. Getting there
 
-## Date 02/09/2026
+## Date 02/10/2026
 
 - Finished RFD connector schematic.
 
@@ -152,7 +152,7 @@
 
 - Testing planned for mag and some mu metal shielding can help
 
-## Date 03/09/2026
+## Date 03/10/2026
 
 - Except radio, all the schematics are done.
 
@@ -168,7 +168,7 @@
 
 - Updated mezzanine pinout to make routing easier for backplane
 
-## Date 04/09/2026
+## Date 04/10/2026
 
 - Had system design sync for FC and backplane, got cooked
 
@@ -202,7 +202,7 @@ Design freeze date for flight controller is 18/05/26
 
 - Gain block schematic is done
 
-## Date 10/09/2026
+## Date 10/10/2026
 
 - Finished SD-CARD schematic, added some missing bulk caps and did a schematic review. Looks okay for now
 
@@ -210,7 +210,7 @@ Design freeze date for flight controller is 18/05/26
 
 - A lot of soldering practice, getting better but need more practice
 
-## Date 11/09/2026
+## Date 11/10/2026
 
 - Almost down with component placement, quick summary is all RF (GNSS and Radio) on bottom layer, opposite corners for max seperation. All IMU centered around COG / COM and close to each other in bottom layer. Buzzer on top and mag on top as well but opposite side for max seperation. Radio SMA's 45 deg rotated to make routing easier and all SMA on top layer, vertical and THT. Everything that needs 12V is on one corner, near to mezzanine 12V, plan is to use a single polygon for 12V. CAN on bottom, cause space in bottom.
 
@@ -218,7 +218,7 @@ Design freeze date for flight controller is 18/05/26
 
 - Jason asked a good question about load line matching, realized that RFO impedence will change based on transmit power so shoudnt it be load line matched? quick reserach suggests that ideally yes but still it is not done often cause matching to highest power still works cause below that it will have power loss but will be small and the power dependence impedence is only a part of total impedence so effiency will drop down to like 70% at lower power.
 
-## Date 12/09/2026
+## Date 12/10/2026
 
 - Finished high level component placement and most low level component placement
 
@@ -226,7 +226,7 @@ Design freeze date for flight controller is 18/05/26
 
 - Can shrink the board down by 5-10mm, maybe that will help
 
-## Date 13/09/2026
+## Date 13/10/2026
 
 - Most of fine component placement done, ready for routing.
 
@@ -236,7 +236,7 @@ Design freeze date for flight controller is 18/05/26
 
 - Looks better now, better use of space, more consistent spacing and better placement.
 
-## Date 14/09/2026
+## Date 14/10/2026
 
 - Reviewed yesterday's work, looks okay for now
 
@@ -247,3 +247,27 @@ Design freeze date for flight controller is 18/05/26
 - Decided on SAFEA1G58KA0F00R15 for SAW, made for L1/GLONASS (Faster RTK fix due to access to GLONASS satellites as well), 1.6dB insertion loss, 32dB min rejection @ 915MHz, good stock and suprisingly very cheap in LCSC.
 
 - Prefer QPQ1060 cause it is temperature compensated but LCSC does not stock Qorvo SAW's. Sad.
+
+## Date 15/10/2026
+
+## Date 16/10/2026
+
+- Took day off from work, need to lock in to finish routing.
+
+- GNSS schematic finshed with SAW added, found a error in it as well, used UNI-D TVS for GNSS SMA, remember RF is a sinusoid so Bipolar and no DC bias as well. Switched to Bi-Di TVS.
+
+- Re-did GNSS placement and routing, it was not easy at all, not able to fit all the components in straight line have to curve some where.
+
+- After playing around with it for some time, decided on about a 30 degree rotation of SMA and rotate the components as well plus curve the trace about 30-40 degree, best i could do. Looked through open source RF designs, curving seems fine as long as done properly.
+
+- Finished some general routing, slowly loosing my fear of vias and prioritizing short and straight trace path and maintaning spacing and proper trace structure while routing.
+
+- Trying to imagine how i am going to route while doing placement to prevent redoing placement while routing and have a proper routing strategy.
+
+- Prioritizing more sensitive / noisy nets first and route the rest after that.
+
+- Stuck on how to do GND for 12V pads in mezzanine without cutting the 12V polygon, will think about it.
+
+## Date 17/10/2026
+
+- 
