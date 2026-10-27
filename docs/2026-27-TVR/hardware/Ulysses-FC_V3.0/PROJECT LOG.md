@@ -271,3 +271,41 @@ Design freeze date for flight controller is 18/05/26
 ## Date 17/10/2026
 
 - 
+
+## Date 23/10/16
+
+- Gain Block spice model from annie was better than what i had, using her's.
+
+- Something is broken in spice, S21 is like -120dB and for some reason +3V3 is disabled, no operating point. 
+
+- It was just LTSpice being stupid, removed everything and added again, it works now.
+
+- Apparently .net can do input and output impedence as well, very usefull
+
+- Another way to do it is inject a 1 AC current source into to port of interest and terminate other end, plot V_Port (=Z)
+
+## Date 24/10/16
+
+- Locking in today, Simulating each filter seperately and going to tune each component.
+
+- Zout of 1st harmonic pi filter is not anywhere near 50R, seems it is not easy to do a 2nd order LPF with specific impedence out because of the frequency response. Trying some things
+
+- Methodology is choose a corner frequency well above signal frequency and check at what frequency, output is 50R. If it is above sig freq, then shift the whole freq response to left by decreasing the corner frequency and vice-versa, that is how you tune lower order filters to output a particular impedence
+
+- Much better result now on L LPF now, doing same for Pi LPF.
+
+- Always calculate X needed of each component, not component value. Way more accurate
+
+- Remember, symmetric Pi-filter corner freq is 1/(pi*(LC)^0.5), have to take total capcitance and input Z will be equal to output Z if symmetric so no impedence conversion.
+
+- Always simulate the impedence of each section and model the output reactance for next section / cancel it out.
+
+- Finally the thing is starting to work, yay.
+
+- Getting the hang of it, starting to make some sense, very happy.
+
+- Cancelling out the reactance from the Pi-filter with a series cap, helps a lot.
+
+- Important: Real part of impedence depends primarily on the impedence transformation which primarily depends on Q-factor (=X/R). So to tune real part of impedence, modify the Q-factor. There is no way to tune reactance or real part of impedence independently, both will be affected cause its the ratio that matters
+
+- The shunt element is the tuning knob for real part. Increase X of shunt element to decrease Q factor meaning less transformation (Q = R_High / X_C). If High R to Low R, then real part of Zout goes higher.
