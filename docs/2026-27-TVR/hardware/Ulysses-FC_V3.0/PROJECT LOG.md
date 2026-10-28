@@ -309,3 +309,21 @@ Design freeze date for flight controller is 18/05/26
 - Important: Real part of impedence depends primarily on the impedence transformation which primarily depends on Q-factor (=X/R). So to tune real part of impedence, modify the Q-factor. There is no way to tune reactance or real part of impedence independently, both will be affected cause its the ratio that matters
 
 - The shunt element is the tuning knob for real part. Increase X of shunt element to decrease Q factor meaning less transformation (Q = R_High / X_C). If High R to Low R, then real part of Zout goes higher.
+
+## Date 25/10/16
+
+## Date 28/10/16
+
+- Spending some time on the FEM, very little resources available datasheet is not very detailed.
+
+- No .s2p or spice file available but FEM is very large signal IC so makes sense.
+
+- Wrote a simple black-box spice model for it usign the S parameter in datasheet, with a CTRL pin to switch between Tx and Rx chain, just 50R terminated ports with gain calculated from its S21 / S12.
+
+- **IMPORTANT**: There is a big difference between maximum power transfer and most effecient power transfer. Conjugate match results in most power transfer form source to load but it always halfs the voltage due to voltage divider using R_source and R_load so power becomes 1/4th (-6dB). That is a universal property. Most efficient power transfer will be when load impedence >>>> source impedence which basically maximizes Vout of the voltage divider (voltage divider ratio) but due to high impedence of load, only a small amount of power can be transferred but happens very efficiently. Finally got it. Have been misunderstanding this for so long. Mind blowing
+
+- Always compensate for the halving of voltage at every macthed port while modeling it, like ANT or TR pin in FEM.
+
+- Remember source needs series termination and load needs parallel termination resistor.
+
+- Spice model seems to be working fine, ofc no frequency behaviour. Only operational at 915MHz and purely for S Parameters and impedence measurements.

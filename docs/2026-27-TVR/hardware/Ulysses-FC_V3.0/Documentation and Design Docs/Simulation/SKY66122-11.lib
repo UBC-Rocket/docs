@@ -1,0 +1,30 @@
+* SKY66121-11
+*****************************************************************************
+* Blackbox 3-port 50R terminated model with S-Parameters and Return Loss (No Harmonics and strictly small signal)
+
+.SUBCKT SKY66121-11_FEM TR PA_IN Tx_FLT LNA_IN Rx_FLT ANT TR_CTRL GND
+.param S21_Tx = 33
+.param S22_Tx = 9
+.param Rx_Gain = 16
+.param S11_Rx = 10
+.param GainV_Tx = 10**(S21_Tx / 20)
+.param GainV_Rx = 10**(Rx_Gain / 20)
+
+R1 TR GND 50
+R2 PA_IN GND 50
+R3 Tx_FLT GND 50
+R4 Rx_FLT GND 50
+R5 LNA_IN GND 50
+
+*When Tx is enabled (V_CTRL > 2.5V), |Psat| = 1W, Compensated for 50R divider at ANT due to 50R load and source 
+B_Tx ANT_i GND V = if(V(TR_CTRL)>2.5, limit(2*V(PA_IN)*GainV_Tx, -20, 20), 0)
+R_Ant ANT_i ANT 50
+
+*When Rx is enabled (V_CTRL < 2.5V)
+B_Rx TR_i GND V = if(V(TR_CTRL) < 2.5, 2 *V(ANT) * GainV_Rx, 0)
+R_TR TR_i TR 50
+
+.ENDS
+ 
+
+
