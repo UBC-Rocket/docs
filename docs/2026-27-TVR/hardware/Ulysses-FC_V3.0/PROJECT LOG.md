@@ -329,3 +329,7 @@ Design freeze date for flight controller is 18/05/26
 - Spice model seems to be working fine, ofc no frequency behaviour. Only operational at 915MHz and purely for S Parameters and impedence measurements.
 
 - FEM only needs bias tee's and decoupling caps. No external filters or match needed. Present chain is largely same. Updated HDL.
+
+- Since we will only be using very low power levels from SX1262, Zopt changes significantly but Semtech only gave load pull at +14dBm and +22dBm. So need to do some extrapolation. (Approx is okay, match not super important at low power levels). Looking into crips load line theory which provides a way to predict output power.
+
+- Crip's paper is amazing. Very intresting read. Still working on it but will calculate Zopt at -3dBm (Max we need) soon.
