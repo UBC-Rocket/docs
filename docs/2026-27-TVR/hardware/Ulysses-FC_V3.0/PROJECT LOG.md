@@ -327,3 +327,5 @@ Design freeze date for flight controller is 18/05/26
 - Remember source needs series termination and load needs parallel termination resistor.
 
 - Spice model seems to be working fine, ofc no frequency behaviour. Only operational at 915MHz and purely for S Parameters and impedence measurements.
+
+- FEM only needs bias tee's and decoupling caps. No external filters or match needed. Present chain is largely same. Updated HDL.
