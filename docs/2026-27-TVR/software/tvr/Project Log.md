@@ -15,3 +15,10 @@
 
 ## DATE: October 26, 2026 
 - Rebase the #3 commit for Panel Component
+
+## DATE: October 28, 2026 
+- Fix mispelling in Panel Component PR
+
+## DATE: October 29, 2026 
+- Add Readout UI Component
+- Add StatusBadge UI Component 
