@@ -1,36 +1,34 @@
-LTspice 26.0.1 for Windows
-Circuit: C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\RF_Front_End_Real.net
-Start Time: Sun Oct 25 00:37:04 2026
+LTspice 26.0.2 for Windows
+Circuit: C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\RF_Front_End_Real.net
+Start Time: Thu Oct 29 16:04:41 2026
 solver = Normal
-Maximum thread count: 24
+Maximum thread count: 22
 tnom = 27
 temp = 27
 method = trap
-Direct Newton iteration failed to find operating point.
-Starting Gmin stepping
-Gmin stepping succeeded in finding the operating point.
-
-Total elapsed time: 0.344 seconds.
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 0.168 seconds.
 
 Files loaded:
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\RF_Front_End_Real.net
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\CL10C330JB8NNN_0603_C0G_33pF_50V.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\LQW18ANR22G8ZD_0603_220nH_Wire-Wound.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\CL10B473KC8WPN_0603_X7R_47nF_50V.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\CL10C101JB8NNN_0603_C0G_100pF_50V.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\LQW18AS1N6J00_0603_1.6nH_Wire-Wound.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GRM1885C1H3R3CA01_0603_C0G_3.3pF_50V.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GCM1885C1H4R7CA16_0603_C0G_4.7pF_50V.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\LQW15AN7N2G8_0603_7.2nH_Wire-Wound.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GRM1885C1H2R0BA01_0603_C0G_2pF_50V.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GRM1885C1H2R5WA01_0603_C0G_2.5pF_50V.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\LQW18AN8N7D00_0603_8.7nH_Wire-Wound.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GRM1885C1H5R1CA01_0603_C0G_5.1pF_50V.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\LQW18AN12NG00_0603_12nH_Wire-Wound.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\LQW18AN9N1C00_0603_9.1nH_Wire-Wound.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\LQW18AN2N4C8ZD_0603_2.4nH_Wire-Wound.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\TRF37D73.lib
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GCM1885C2A100JA16_0603_C0G_10pF_100V.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GJM1555C1H2R5WB01_0402_C0G_2.5pF_50V.mod
-C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\SKY13370_Vctrl_3000mV_RFC_J1_25C.inc
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\RF_Front_End_Real.net
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GRM1885C1H2R7BA01_0603_C0G_2.7pF_50V.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\LQW18ANR22G8ZD_0603_220nH_Wire-Wound.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\CL10B473KC8WPN_0603_X7R_47nF_50V.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\CL10C101JB8NNN_0603_C0G_100pF_50V.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\LQW18AS1N6J00_0603_1.6nH_Wire-Wound.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GRM1885C1H3R3CA01_0603_C0G_3.3pF_50V.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GCM1885C1H4R7CA16_0603_C0G_4.7pF_50V.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\LQW15AN7N2G8_0603_7.2nH_Wire-Wound.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GRM1885C1H2R0BA01_0603_C0G_2pF_50V.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GRM1885C1H2R5WA01_0603_C0G_2.5pF_50V.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GRM1885C1H5R1CA01_0603_C0G_5.1pF_50V.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\LQW18AN12NG00_0603_12nH_Wire-Wound.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\LQW18AN8N7D00_0603_8.7nH_Wire-Wound.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\LQW18AN2N4C8ZD_0603_2.4nH_Wire-Wound.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\TRF37D73.lib
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GCM1885C2A100JA16_0603_C0G_10pF_100V.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GRM1885C1H2R9WA01_0603_C0G_2.9pF_50V.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\CL10C330JB8NNN_0603_C0G_33pF_50V.mod
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\SKY13370_Vctrl_3000mV_RFC_J1_25C.inc
+C:\Users\GuganSivakumar\Documents\Github\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\SKY66122-11.lib
 
