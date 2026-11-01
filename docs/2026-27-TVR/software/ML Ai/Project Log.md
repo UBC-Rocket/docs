@@ -27,7 +27,7 @@ Kalman filters face two main problems: system model and noise model parameter id
 
 Machine learning can be used to determine the state equations of the system based on experimental data when the dynamics of a system are hard to describe.
 
-Machine learning can be used estimate the parameters of a Kalman filter, such as determining the noise model parameters.
+Machine learning can be used to estimate the parameters of a Kalman filter, such as determining the noise model parameters.
 
 Use gated recurrent unit (GRN), a type of recurrent neural network (RNN), because it is light weight. Best used for predicting error.
 
@@ -40,3 +40,20 @@ Used a GRU-aided ESKF (error-state Kalman filter) for visual inertial odometry i
 More info on ESKF. Good for nonlinear applications to accurately estimate error. Used in tandem with EKF (extended Kalman filter).
 
 Using a small model it could be possible to run the ML-aided KF on a single M7 core with under 1MB of RAM and less than 250 kB of flash memory. Might be worth just adding a another board to the stack as it would provide significantly more compute and allow for a larger ML model.
+
+## DATE: November 1st, 2026
+
+### Kalman Filter's with ML (cont)
+
+[RTN MPC](https://arxiv.org/pdf/2203.07747)
+
+Use ML to model complex dynamics system. Uses gradient-based online optimization MPC to run large models with real-time results.Reduced positional tracking error by up to 82%.
+
+Start with a lightweight dynamics model for the model to build off of, and have the model predict only residuals so a smaller model can be used. Use native machine learning batch differentiation (built into PyTorch or TensorFlow) to compute derivatives in parallel. Locally linearize the network graph at each timestep.
+
+[Colored Noise](https://www.mdpi.com/2073-8994/18/10/1669)
+[CKFNet](https://arxiv.org/pdf/2508.09727)
+
+Hybrid framework, integrating GRUs with the KF to eliminate the need for Kalman Gain computations and explicit noise modelling and instead have the GRU model the noise. Works well for application where noise is colored and varies with time.
+
+CKFNet uses 151k parameters, enabling real-time deployment. More efficient than KalmanNet.
