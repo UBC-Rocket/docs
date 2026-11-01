@@ -123,6 +123,15 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_ST7735.h>
+
+#define TFT_CS    10
+#define TFT_DC    9
+#define TFT_SDA   11
+#define TFT_SCK   12
+#define TFT_RST   8
+
 
 // ---------------- Settings to review ----------------
 const int SSR_PIN = 7;
@@ -975,6 +984,23 @@ void readCommands() {
   }
 }
 
+void displayValue(String label, float value, int row, int decimalPlaces = 2) {
+
+    int y = 30 + row * 15;
+
+    // Clear only this row
+    tft.fillRect(0, y, 128, 12, ST77XX_BLACK);
+
+    tft.setCursor(5, y);
+    tft.setTextSize(1);
+    tft.setTextColor(ST77XX_WHITE);
+
+    tft.print(label);
+    tft.print(": ");
+    tft.println(value, decimalPlaces);
+}
+
+
 void setup() {
   digitalWrite(SSR_PIN, SSR_ACTIVE_HIGH ? LOW : HIGH);
   pinMode(SSR_PIN, OUTPUT);
@@ -990,6 +1016,34 @@ void setup() {
   Serial.println("# UV_PER_C=52 retained: verify sensor/calibration before high temperature.");
   sampleStep();
   printHelp();
+
+
+
+  // Initialize TFT
+  tft.initR(INITR_BLACKTAB);
+
+  // Landscape orientation
+  tft.setRotation(1);
+
+  // Clear display
+  tft.fillScreen(ST77XX_BLACK);
+
+  // Title
+  tft.setTextSize(2);
+  tft.setTextColor(ST77XX_WHITE);
+  tft.setCursor(10, 10);
+  tft.println("TFT128");
+
+  // RGB test
+  tft.fillRect(10, 50, 35, 35, ST77XX_RED);
+  tft.fillRect(50, 50, 35, 35, ST77XX_GREEN);
+  tft.fillRect(90, 50, 35, 35, ST77XX_BLUE);
+
+  // Text
+  tft.setTextSize(1);
+  tft.setCursor(10, 110);
+  tft.print("Mode: ");
+  tft.println(modeName());
 }
 
 void loop() {
@@ -998,4 +1052,10 @@ void loop() {
   readCommands();
   if ((uint32_t)(millis() - lastSampleMs) >= SAMPLE_MS) sampleStep();
   if (sdClosePending && !heatingMode()) closeLog();
+    displayValue("Temp", filteredC, 0, 1);
+    displayValue("Target", targetC, 1, 1);
+    displayValue("Rate", rateCps, 2, 2);
+    displayValue("Duty", dutyCommand, 3, 1);
+    displayValue("Peak", peakC, 4, 1);
+    displayValue("Liquidus", aboveLiquidusS, 5, 1);
 }
