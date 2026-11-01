@@ -271,3 +271,65 @@ Design freeze date for flight controller is 18/05/26
 ## Date 17/10/2026
 
 - 
+
+## Date 23/10/16
+
+- Gain Block spice model from annie was better than what i had, using her's.
+
+- Something is broken in spice, S21 is like -120dB and for some reason +3V3 is disabled, no operating point. 
+
+- It was just LTSpice being stupid, removed everything and added again, it works now.
+
+- Apparently .net can do input and output impedence as well, very usefull
+
+- Another way to do it is inject a 1 AC current source into to port of interest and terminate other end, plot V_Port (=Z)
+
+## Date 24/10/16
+
+- Locking in today, Simulating each filter seperately and going to tune each component.
+
+- Zout of 1st harmonic pi filter is not anywhere near 50R, seems it is not easy to do a 2nd order LPF with specific impedence out because of the frequency response. Trying some things
+
+- Methodology is choose a corner frequency well above signal frequency and check at what frequency, output is 50R. If it is above sig freq, then shift the whole freq response to left by decreasing the corner frequency and vice-versa, that is how you tune lower order filters to output a particular impedence
+
+- Much better result now on L LPF now, doing same for Pi LPF.
+
+- Always calculate X needed of each component, not component value. Way more accurate
+
+- Remember, symmetric Pi-filter corner freq is 1/(pi*(LC)^0.5), have to take total capcitance and input Z will be equal to output Z if symmetric so no impedence conversion.
+
+- Always simulate the impedence of each section and model the output reactance for next section / cancel it out.
+
+- Finally the thing is starting to work, yay.
+
+- Getting the hang of it, starting to make some sense, very happy.
+
+- Cancelling out the reactance from the Pi-filter with a series cap, helps a lot.
+
+- Important: Real part of impedence depends primarily on the impedence transformation which primarily depends on Q-factor (=X/R). So to tune real part of impedence, modify the Q-factor. There is no way to tune reactance or real part of impedence independently, both will be affected cause its the ratio that matters
+
+- The shunt element is the tuning knob for real part. Increase X of shunt element to decrease Q factor meaning less transformation (Q = R_High / X_C). If High R to Low R, then real part of Zout goes higher.
+
+## Date 25/10/16
+
+## Date 28/10/16
+
+- Spending some time on the FEM, very little resources available datasheet is not very detailed.
+
+- No .s2p or spice file available but FEM is very large signal IC so makes sense.
+
+- Wrote a simple black-box spice model for it usign the S parameter in datasheet, with a CTRL pin to switch between Tx and Rx chain, just 50R terminated ports with gain calculated from its S21 / S12.
+
+- **IMPORTANT**: There is a big difference between maximum power transfer and most effecient power transfer. Conjugate match results in most power transfer form source to load but it always halfs the voltage due to voltage divider using R_source and R_load so power becomes 1/4th (-6dB). That is a universal property. Most efficient power transfer will be when load impedence >>>> source impedence which basically maximizes Vout of the voltage divider (voltage divider ratio) but due to high impedence of load, only a small amount of power can be transferred but happens very efficiently. Finally got it. Have been misunderstanding this for so long. Mind blowing
+
+- Always compensate for the halving of voltage at every macthed port while modeling it, like ANT or TR pin in FEM.
+
+- Remember source needs series termination and load needs parallel termination resistor.
+
+- Spice model seems to be working fine, ofc no frequency behaviour. Only operational at 915MHz and purely for S Parameters and impedence measurements.
+
+- FEM only needs bias tee's and decoupling caps. No external filters or match needed. Present chain is largely same. Updated HDL.
+
+- Since we will only be using very low power levels from SX1262, Zopt changes significantly but Semtech only gave load pull at +14dBm and +22dBm. So need to do some extrapolation. (Approx is okay, match not super important at low power levels). Looking into crips load line theory which provides a way to predict output power.
+
+- Crip's paper is amazing. Very intresting read. Still working on it but will calculate Zopt at -3dBm (Max we need) soon.
