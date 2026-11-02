@@ -272,7 +272,7 @@ Design freeze date for flight controller is 18/05/26
 
 - 
 
-## Date 23/10/16
+## Date 23/10/2026
 
 - Gain Block spice model from annie was better than what i had, using her's.
 
@@ -284,7 +284,7 @@ Design freeze date for flight controller is 18/05/26
 
 - Another way to do it is inject a 1 AC current source into to port of interest and terminate other end, plot V_Port (=Z)
 
-## Date 24/10/16
+## Date 24/10/2026
 
 - Locking in today, Simulating each filter seperately and going to tune each component.
 
@@ -310,9 +310,9 @@ Design freeze date for flight controller is 18/05/26
 
 - The shunt element is the tuning knob for real part. Increase X of shunt element to decrease Q factor meaning less transformation (Q = R_High / X_C). If High R to Low R, then real part of Zout goes higher.
 
-## Date 25/10/16
+## Date 25/10/2026
 
-## Date 28/10/16
+## Date 28/10/2026
 
 - Spending some time on the FEM, very little resources available datasheet is not very detailed.
 
@@ -322,7 +322,7 @@ Design freeze date for flight controller is 18/05/26
 
 - **IMPORTANT**: There is a big difference between maximum power transfer and most effecient power transfer. Conjugate match results in most power transfer form source to load but it always halfs the voltage due to voltage divider using R_source and R_load so power becomes 1/4th (-6dB). That is a universal property. Most efficient power transfer will be when load impedence >>>> source impedence which basically maximizes Vout of the voltage divider (voltage divider ratio) but due to high impedence of load, only a small amount of power can be transferred but happens very efficiently. Finally got it. Have been misunderstanding this for so long. Mind blowing
 
-- Always compensate for the halving of voltage at every macthed port while modeling it, like ANT or TR pin in FEM.
+- Always compensate for the halving of voltage at every matched port while modeling it, like ANT or TR pin in FEM.
 
 - Remember source needs series termination and load needs parallel termination resistor.
 
@@ -333,3 +333,17 @@ Design freeze date for flight controller is 18/05/26
 - Since we will only be using very low power levels from SX1262, Zopt changes significantly but Semtech only gave load pull at +14dBm and +22dBm. So need to do some extrapolation. (Approx is okay, match not super important at low power levels). Looking into crips load line theory which provides a way to predict output power.
 
 - Crip's paper is amazing. Very intresting read. Still working on it but will calculate Zopt at -3dBm (Max we need) soon.
+
+# Date 29/10/2026
+
+- Looked through some open source designs with mixed signal, Dig + RF etc. for some routing inspiration. Hades from phils lab is pretty decent.
+
+- Some work on spice sims after FEM IC added in
+
+- **IMPORTANT**: Order of filter is the amount of knobs you can control / variables so only that many characteristics of a filter (Shape, corner, Z @ Freq etc..) can be controlled as well so a second order filter cannot be designed to have a particular shape, a specific corner freq and a specific Z @ freq.
+
+- Z of transmission line is characteristic impedence which in ideal case does not depend on frequency. The reactance is cancelled out by L and C. Same applies to filters as well.
+
+# Date 30/10/2026
+
+- 
