@@ -248,7 +248,6 @@ Design freeze date for flight controller is 18/05/26
 
 - Prefer QPQ1060 cause it is temperature compensated but LCSC does not stock Qorvo SAW's. Sad.
 
-## Date 15/10/2026
 
 ## Date 16/10/2026
 
@@ -344,9 +343,31 @@ Design freeze date for flight controller is 18/05/26
 
 - Z of transmission line is characteristic impedence which in ideal case does not depend on frequency. The reactance is cancelled out by L and C. Same applies to filters as well.
 
-# Date 30/10/2026
+## Date 30/11/2026
 
-- 
+- Spent most of the time on VRNDA motor driver PCB.
+
+- Did some work on spice sims with FEM, mostly done and tuning going good as well.
+
+## Date 01/11/2026
+
+- Played around with another PA IC Annie found, its spice model is not working for reason, very expensive and needs external filters to work so cannot acurately characterize how it will interact with SX1262 recommended filters. Sticking with the FEM IC.
+
+- Front end is too long to do a proper layout inside shield, big mistake using 0603's. Will never do it again.
+
+- Switching all passives to 0402 and 0201's and thinking of getting only the radio section assembled.
+
+- Spice updated with 0402/0201 passives and tuned again. All good
+
+- Updated about half of the front end in altium with new smaller passives.
+
+## Date 02/11/2026
+
+- Made a Radio only BOM and CPL, it costs 175 CAD extra for assembling radio section alone. Crazy expensive. Mainly cause JLC economic assembly is only upto 6 layers. No way i am doing that.
+
+- Thinking of doing a more rectangular shield with a bit more length and smaller width for more layout space, looked through some shields in TE and LCSC. No good option that can work
+
+- Reading up on 90 degree traces, especially for RF (Altium article and one on google is good). Main takeaway is there is not much concrete proof that 90 deg traces presents as partial discontinuity and that it has significant impact on impedence or EMI until like 10's GHz. ofc only use if need to and curve it
 
 ## Date 04/11/2026
 
@@ -369,3 +390,46 @@ Move the whole chain inside shield up a bit and move ST-link down, 4x4 thermal v
 Rotate / move a couple of caps near the MCU, Thermal vias possible on FEM IC
 
 12V-GND can be done, just a single poly for GND next to each other, will cut 12V poly but the other side will handle it. Add some vias for the GND poly
+
+- Corrected impedence profiles with correct Dk's from JLC, trace widths updated. Note cannot route D120 on Layer 6 (Width = about 0.087mm)
+
+- Moved the DC-DC inductor and bulk cap for radio to top layer cause makes layout much nicer, and reduces coupling of switching noise to shield and other components nearby. (Semtech recommends as well)
+
+- Implemented above mentioned solutions, all good. TCXO layout is decent and thermal vias on Radio IC and FEM IC is good.
+
+- CAN Diff pair via jumped to layer 4, layout looks okay. Length difference is about 0.13mm, not bad.
+
+- Added clearance to between diff pair to remove poly between them and some clearance to same layer poly as well
+
+- Added some extra poly cutout where needed and started adding shielding vias as well
+
+- Most decoupling and bulk cap placed and routed, looks decent but a bit contstrained layout
+
+- Shield position set to 14.4mm and 38.25mm, provides some clearance to all components
+
+- Moved some traces on top and PWR layer to prioritize RF
+
+- RF front end layout mostly done
+
+## Date 05/11/2026
+
+- Quick review of yesterday's routing:
+
++3V3 via for Pin 1 on SX1262 neads to be moves, hitting shield pads
+
+FEM IC Pin 35 decoupling cap can be placed by rotating Pin 1 cap 90 deg and move it a bit
+
+Move C107 a bit out for some clearance
+
+Do not forget teardrops on all CI traces and can use thermal relief on decoupling and bulk cap in radio section.(Semtech also agrees)
+
+Remove thermal relief on any +12V hole / pad (J14)
+
+Y did u remove thermal vias on SX1262 EP? Stupid, add it back
+
+Pin 24 on SX1262 not routed
+
+Length of mezzanine CAN Diff pair could a bit more matched (at around 0.6mm diff now), not super important. (Remember Rick Hartley lecture on Diff Pairs)
+
+
+
