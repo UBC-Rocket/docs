@@ -29,3 +29,7 @@
 - Pin 24 on SX1262 not routed
 
 - Length of mezzanine CAN Diff pair could a bit more matched (at around 0.6mm diff now), not super important. (Remember Rick Hartley lecture on Diff Pairs)
+
+- Increase VBAT trace width just to be safe
+
+- Dont forget the 12V-GND thing

@@ -367,7 +367,21 @@ Design freeze date for flight controller is 18/05/26
 
 - Thinking of doing a more rectangular shield with a bit more length and smaller width for more layout space, looked through some shields in TE and LCSC. No good option that can work
 
-- Reading up on 90 degree traces, especially for RF (Altium article and one on google is good). Main takeaway is there is not much concrete proof that 90 deg traces presents as partial discontinuity and that it has significant impact on impedence or EMI until like 10's GHz. ofc only use if need to and curve it
+- Switching to 0402 for all RF, gonna a optimize the layout and add some curves. Try and fit the chain in. Sticking with the shield as well. Assembly in-house.
+
+- Reading up on 90 degree traces, especially for RF (Altium article and one on google is good). Main takeaway is there is not much concrete proof that 90 deg traces presents as partial discontinuity and that it has significant impact on impedence or EMI until like 10's GHz. ofc only use if need to and curve it.
+
+- Updated spice sims with all 0402, some tuning but all good.
+
+- Played round with RF layout a bit to see if anything works, some progress but nothing solid.
+
+## Date 03/11/2026
+
+- Some more playing around with layout, got a preliminary layout done, looks okay but a few things not liking - clearances are really tight, very constrained layout, still need to think about SI etc..
+
+- Read up on semtech's PCB design guidlines for SX/LR chips, some decent info there especially about DC-DC switching noise coupling and optimizations. Main takeaways is some clearance for all components to shield recommended, 1.5mm clearance between the DC-DC inductor and everything and generally think about noise coupling.
+
+- Did some routing and layout, still problems unsolved. needs more work
 
 ## Date 04/11/2026
 
@@ -382,6 +396,8 @@ Edit rules to some add good sliver for any Z controlled traces to reduce field c
 Highly advised to use some decent sliver for all, makes rework safer
 
 Recheck impedence profiles, and modify since need to be via jumped now
+
+- **Important**: Remove poly between a diff pair to keep the coupling within the pair, some clearance between a pair and poly si also recommended to reduce field coupling with smae layer poly which can change its characteristic impedence, we want most of field to terminate in its reference plane. Carful not to put any poly cutouts in reference plane, return path will break and going to radiate all that field out resulting in EMI.
 
 - Worked out some solutions for routing problems yesterday as well:
 
@@ -431,5 +447,7 @@ Pin 24 on SX1262 not routed
 
 Length of mezzanine CAN Diff pair could a bit more matched (at around 0.6mm diff now), not super important. (Remember Rick Hartley lecture on Diff Pairs)
 
+Increase VBAT trace width just to be safe
 
+Dont forget the 12V-GND thing
 
