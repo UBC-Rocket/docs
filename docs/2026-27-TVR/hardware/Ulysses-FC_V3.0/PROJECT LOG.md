@@ -347,3 +347,25 @@ Design freeze date for flight controller is 18/05/26
 # Date 30/10/2026
 
 - 
+
+## Date 04/11/2026
+
+- Did a quick review of the routing in sensitive places, changes:
+
+Add some solder mask exp on impedence all RF traces to reduce insertion loss dues to solder mask, keep mask near TVS or any other component.
+
+Via jump CAN Diff pair for mezzanine carefully, add a few GND vias around transition to keep field contained and remove GND between all Diff pair to keep the coupling within the pair
+
+Edit rules to some add good sliver for any Z controlled traces to reduce field coupling with same layer pour. Think about return paths, no cutout or anything stupid on reference plan
+
+Highly advised to use some decent sliver for all, makes rework safer
+
+Recheck impedence profiles, and modify since need to be via jumped now
+
+- Worked out some solutions for routing problems yesterday as well:
+
+Move the whole chain inside shield up a bit and move ST-link down, 4x4 thermal vias on RFIC possible. TCXO also gets more clearance
+
+Rotate / move a couple of caps near the MCU, Thermal vias possible on FEM IC
+
+12V-GND can be done, just a single poly for GND next to each other, will cut 12V poly but the other side will handle it. Add some vias for the GND poly
