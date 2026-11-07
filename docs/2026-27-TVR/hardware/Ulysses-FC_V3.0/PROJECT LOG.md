@@ -397,7 +397,7 @@ Highly advised to use some decent sliver for all, makes rework safer
 
 Recheck impedence profiles, and modify since need to be via jumped now
 
-- **Important**: Remove poly between a diff pair to keep the coupling within the pair, some clearance between a pair and poly si also recommended to reduce field coupling with smae layer poly which can change its characteristic impedence, we want most of field to terminate in its reference plane. Carful not to put any poly cutouts in reference plane, return path will break and going to radiate all that field out resulting in EMI.
+- **Important**: Remove poly between a diff pair to keep the coupling within the pair, some clearance between a pair and poly is also recommended to reduce field coupling with smae layer poly which can change its characteristic impedence, we want most of field to terminate in its reference plane. Carful not to put any poly cutouts in reference plane, return path will break and going to radiate all that field out resulting in EMI.
 
 - Worked out some solutions for routing problems yesterday as well:
 
@@ -451,3 +451,6 @@ Increase VBAT trace width just to be safe
 
 Dont forget the 12V-GND thing
 
+## Date 06/11/2026
+
+- Most of routing and layout done, doing some touchups now and will start on silkscreen and DRC soon

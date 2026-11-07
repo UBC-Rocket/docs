@@ -33,3 +33,13 @@
 - Increase VBAT trace width just to be safe
 
 - Dont forget the 12V-GND thing
+
+## Date 06/11/2026
+
+- Dont forget the buzzer changes, removed the diode.
+
+- Most seems fine, some corrections on traces, just touchups
+
+- Thermal vias on FEM IC is not correct, Datasheet recommendeds 0.3mm vias X 0.6mm spacing grid - about 7X7 grid (49 vias). Due to my layout using a bit lower pitch of about 0.53mm and manual via array to hit thier specs
+
+- Still have not done the buzzer thing, will do soon
