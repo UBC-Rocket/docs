@@ -262,7 +262,7 @@ void io_uart_stm32_init(io_uart_t *uart, const struct io_uart_stm32_config *conf
 
     uart->config = ...; // Populate with vendor specific configuration
     uart->data = ...;   // Populate with vendor specific runtime data
-    uart->ops = uart_ops;
+    uart->ops = &uart_ops;
 
     // Perform other vendor specific initialization (i.e. registering
     // interrupts, HAL initialization, etc).
