@@ -2,10 +2,10 @@
 title: 'Transfer Function and Bode Plots'
 description: ''
 published: true
-date: 2026-11-08T22:06:02.000Z
+date: 2026-11-08T22:13:55.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T22:06:02.000Z
+dateCreated: 2026-11-08T22:13:55.000Z
 ---
 
 Pretty much everything involved in control systems works in Laplace Space – we are working in the frequency domain! Transfer functions in control systems are in the Laplace space, and tell us the relationship between the system input and outputs.

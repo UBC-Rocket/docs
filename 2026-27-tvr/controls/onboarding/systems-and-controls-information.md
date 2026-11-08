@@ -2,10 +2,10 @@
 title: 'Systems and Controls Information'
 description: ''
 published: true
-date: 2026-11-08T22:06:02.000Z
+date: 2026-11-08T22:13:55.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T22:06:02.000Z
+dateCreated: 2026-11-08T22:13:55.000Z
 ---
 
 For an overview and basic understanding of systems and controls, please read the following GeeksforGeeks article; they do a pretty good job of explaining what a control system is:

@@ -2,15 +2,15 @@
 title: 'Telemetry GND Station ProjectLog'
 description: ''
 published: true
-date: 2026-11-08T22:06:02.000Z
+date: 2026-11-08T22:13:55.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T22:06:02.000Z
+dateCreated: 2026-11-08T22:13:55.000Z
 ---
 
 ### RF Transceiver High-Level Design
 
-![RF Transceiver Block Diagram](/2026-27-tvr/hardware/telemetry-gnd-station/rf_transceiver_hld.drawio.svg)
+![RF Transceiver Block Diagram](/2026-27-tvr/hardware/telemetry-gnd-station/rf-transceiver-hld-drawio.svg)
 
 ### Oct 3–13, 2026: RF Fundamentals and Impedance Matching
 

@@ -2,10 +2,10 @@
 title: 'Quaternions'
 description: ''
 published: true
-date: 2026-11-08T22:06:02.000Z
+date: 2026-11-08T22:13:55.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T22:06:02.000Z
+dateCreated: 2026-11-08T22:13:55.000Z
 ---
 
 Define the vector space $`\mathbb H := \mathbb R \times \mathbb R^3`$ as the real vector space with basis $`\{1, \hat i, \hat j, \hat k\}`$ to be the set of all quaternions, i.e.

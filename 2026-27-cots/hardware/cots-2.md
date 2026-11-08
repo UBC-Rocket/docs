@@ -2,13 +2,13 @@
 title: 'COTS 2'
 description: ''
 published: true
-date: 2026-11-08T22:06:02.000Z
+date: 2026-11-08T22:13:55.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T22:06:02.000Z
+dateCreated: 2026-11-08T22:13:55.000Z
 ---
 
-![system-cots-2](/2026-27-cots/hardware/cots-2/screenshot-2026-10-14-at-12.12.50-am.png)
+![system-cots-2](/2026-27-cots/hardware/cots-2/screenshot-2026-10-14-at-12-12-50-am.png)
 
 The following has the 4 sides of the second stage COTS bay.
 
@@ -21,7 +21,7 @@ Enter details about the swift antenna tracker including price and justification 
 Explain what the purpose of the blue jays are, why 3, and again justification for using them, price, and information on if purchased
 
 For more information on the carrier board for these view:
-[Blue jay carrier board](/2026-27-cots/hardware/cots-2/blue_jay_carrier)
+[Blue jay carrier board](/2026-27-cots/hardware/cots-2/blue-jay-carrier)
 
 ## Side 3: Spot trace
 Redudant GPS for finding the rocket afterwards.

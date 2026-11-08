@@ -2,10 +2,10 @@
 title: 'Architecture overview'
 description: ''
 published: true
-date: 2026-11-08T22:06:02.000Z
+date: 2026-11-08T22:13:55.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T22:06:02.000Z
+dateCreated: 2026-11-08T22:13:55.000Z
 ---
 
 Introduction
@@ -34,7 +34,7 @@ The main challenge of designing the flight controller lies in how coupled or int
 
 After consulting several research papers on quaternion-based quasi-PID control systems and combining relevant equations to the Phase 1 rocket, the following rough draft of the control system was proposed:
 
-![phase_1](/2026-27-tvr/controls/control-algorithm/phase_1.jpg)
+![phase-1](/2026-27-tvr/controls/control-algorithm/phase-1.jpg)
 
 A block diagram of the system was then created in Simulink for simulation and testing purposes:
 
