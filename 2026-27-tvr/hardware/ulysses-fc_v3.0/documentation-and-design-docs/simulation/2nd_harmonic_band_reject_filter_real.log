@@ -1,0 +1,19 @@
+LTspice 26.0.1 for Windows
+Circuit: C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\2nd_Harmonic_Band_Reject_Filter_Real.net
+Start Time: Sat Oct 24 11:25:24 2026
+solver = Normal
+Maximum thread count: 24
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 0.122 seconds.
+
+Files loaded:
+C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\2nd_Harmonic_Band_Reject_Filter_Real.net
+C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\LQW18AS1N6J00_0603_1.6nH_Wire-Wound.mod
+C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GRM1885C1H3R3CA01_0603_C0G_3.3pF_50V.mod
+C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\CL10C101JB8NNN_0603_C0G_100pF_50V.mod
+C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GRM1885C1H1R0WA01_0603_C0G_1pF_50V.mod
+C:\Users\gugan\Documents\GitHub\docs\docs\2026-27-TVR\hardware\Ulysses-FC_V3.0\Documentation and Design Docs\Simulation\Spice_Models\GCM1885C2A100JA16_0603_C0G_10pF_100V.mod
+

@@ -1,0 +1,139 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="_s_Z2x5P0eoYtAdpD91w">
+    <mxGraphModel grid="0" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="70" pageHeight="70" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="D0RLzR91enEYBCgCvxk8-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Backplane PCB&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;(4 Layer)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2 X&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;68 pin B-to-B Mezzanine Header (294152-E)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Battery Voltage Monitor&lt;/div&gt;&lt;div&gt;Cell Voltages Monitor&lt;/div&gt;&lt;div&gt;Passive Cell Balancing&lt;br&gt;(BQ76942)&lt;br&gt;&lt;br&gt;5V Buck&lt;br&gt;3V3 LDO&lt;/div&gt;&lt;div&gt;12V Buck for Dynamixel&lt;br&gt;(LM61460)&lt;/div&gt;&lt;div&gt;&lt;br&gt;Camera Power Circuit&lt;span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Stack Power On Switch&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;1 X 84 pin B-to-B Mezzanine Header (&lt;span style=&quot;white-space: pre; color: light-dark(rgb(165, 214, 255), rgb(255, 255, 255));&quot;&gt;BB51-84AT-1-3HB&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1 X 84&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;pin B-to-B Mezzanine Socket&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;(&lt;span style=&quot;white-space: pre;&quot;&gt;BB52-84AT-1-3HB&lt;/span&gt;)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="398" width="203" x="706" y="474.5" as="geometry" />
+        </mxCell>
+        <mxCell id="dq8OgmJtP8p4AcBvqBWV-1" edge="1" parent="1" source="D0RLzR91enEYBCgCvxk8-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="D0RLzR91enEYBCgCvxk8-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D0RLzR91enEYBCgCvxk8-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;ESC PCB&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;(4 / 6 Layer)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;STM32G071CBU6&lt;/div&gt;&lt;div&gt;(M0+ Arm Cortex, 64MHz, 128KB Flash, 36KB RAM, LQFP 48 pin)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Dual Channel&lt;/div&gt;&lt;div&gt;Upto 12s, 50A per channel&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;AM32 Firmware, Bidirectional Dshot&lt;/div&gt;&lt;div&gt;Six Step Commutation&lt;/div&gt;&lt;div&gt;eRPM Telemetry&lt;/div&gt;&lt;div&gt;Dynamic Dead Time Control&lt;/div&gt;&lt;div&gt;Shoot-Through Protection&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Strong Pull down for&amp;nbsp;&lt;/div&gt;&lt;div&gt;Miller effect false turn-on&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Current and Temp Monitoring&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;amp; OCP / OTP Protection&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Battery Short Circuit Protection&lt;/div&gt;&lt;div&gt;Battery Current Monitoring&lt;/div&gt;&lt;div&gt;Battery SoC Estimation&amp;nbsp;&lt;/div&gt;&lt;div&gt;(Fuel Gauge,&amp;nbsp;&lt;font style=&quot;font-size: 12px; font-weight: normal;&quot;&gt;BQ34Z100&lt;/font&gt;)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;1 X EC8/XT60 Lipo Male Connector&lt;/div&gt;&lt;div&gt;1 X 6s Balance JST Socket&lt;/div&gt;&lt;div&gt;1 X 84 pin B-to-B Mezzanine Header (&lt;span style=&quot;white-space: pre; color: light-dark(rgb(165, 214, 255), rgb(255, 255, 255));&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;BB51-84AT-1-3HB&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1 X 84&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;pin B-to-B Mezzanine Socket&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;(&lt;span style=&quot;white-space: pre;&quot;&gt;BB52-84AT-1-3HB&lt;/span&gt;)&lt;/div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="552" width="200" x="376" y="397.5" as="geometry" />
+        </mxCell>
+        <mxCell id="D0RLzR91enEYBCgCvxk8-17" edge="1" parent="1" source="D0RLzR91enEYBCgCvxk8-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="437" y="949.5" />
+            </Array>
+            <mxPoint x="437" y="949.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D0RLzR91enEYBCgCvxk8-19" connectable="0" parent="D0RLzR91enEYBCgCvxk8-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="EC8 / XT60&amp;nbsp;&lt;br&gt;Connector" vertex="1">
+          <mxGeometry relative="1" x="0.1714" y="-2" as="geometry">
+            <mxPoint x="-2" y="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D0RLzR91enEYBCgCvxk8-18" edge="1" parent="1" source="D0RLzR91enEYBCgCvxk8-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="497.01" y="949.51" />
+            </Array>
+            <mxPoint x="497.01" y="949.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D0RLzR91enEYBCgCvxk8-20" connectable="0" parent="D0RLzR91enEYBCgCvxk8-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;Balance&amp;nbsp;&lt;/div&gt;&lt;div&gt;Connector&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.2166" as="geometry">
+            <mxPoint x="10" y="13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D0RLzR91enEYBCgCvxk8-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;6s 4000 mAh 100C Lipo / 6s 4800 mAh&amp;nbsp; 12.5C 21700 Li-ion&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="120" x="412" y="1007" as="geometry" />
+        </mxCell>
+        <mxCell id="hnDhjjl9mAOnXjWIXjY9-8" edge="1" parent="1" source="hnDhjjl9mAOnXjWIXjY9-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="476" y="397.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hnDhjjl9mAOnXjWIXjY9-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="2 X Emax eco III 2808 1300 Kv motors" vertex="1">
+          <mxGeometry height="70" width="120" x="416" y="299" as="geometry" />
+        </mxCell>
+        <mxCell id="hnDhjjl9mAOnXjWIXjY9-10" edge="1" parent="1" source="hnDhjjl9mAOnXjWIXjY9-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="hnDhjjl9mAOnXjWIXjY9-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hnDhjjl9mAOnXjWIXjY9-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Gemfan 7037 Tri-blade Carbon Polymer propellers / 7035 2-blade Propellers&amp;nbsp;" vertex="1">
+          <mxGeometry height="100" width="120" x="416" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="ROQqVZs6hulX6o5R3Fgs-3" edge="1" parent="1" source="ROQqVZs6hulX6o5R3Fgs-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="D0RLzR91enEYBCgCvxk8-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ROQqVZs6hulX6o5R3Fgs-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="5.8GHz FPV Camera with Transmitter&amp;nbsp;&lt;div&gt;(P1 Air Unit HD)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="120" x="747.5" y="914" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;USB-C PD Battery&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Charger DFT PCB&lt;br&gt;&lt;/font&gt;&lt;font&gt;(4 Layer)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;USB-C PD 20V 5A PPS&lt;/div&gt;&lt;div&gt;(TP25751D)&lt;br&gt;&lt;br&gt;Buck - Boost Battery Charger&amp;nbsp;&lt;/div&gt;&lt;div&gt;(1 - 14s Li-ion max 90W)&lt;/div&gt;&lt;div&gt;(BQ25756)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Battery Voltage and Current Monitor&lt;/div&gt;&lt;div&gt;Cell Voltages Monitor&lt;/div&gt;&lt;div&gt;Passive Cell Balancing&lt;/div&gt;&lt;div&gt;Temperature Monitoring&lt;br&gt;(BQ76942)&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;OLED with Monitored Parameters&amp;nbsp;&lt;/div&gt;&lt;div&gt;Displayed&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Ability to change&amp;nbsp;&lt;/div&gt;&lt;div&gt;Charging Voltage (1-14s) and Current&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Common battery connectors&amp;nbsp;&lt;/div&gt;&lt;div&gt;(XT60, Red JST etc..)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;DC Jack and XT60 Input Ports&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="444" width="218" x="1081" y="-94" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-10" edge="1" parent="1" source="iGwclVrzDPZG-cvXesvs-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="D0RLzR91enEYBCgCvxk8-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;TVR Flight Controller PCB&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;(6/8 Layer)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;STM32H745&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1 X RTK GNSS&amp;nbsp;&lt;/div&gt;&lt;div&gt;(U-BLOX ZED-F9P-04B&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;2 X UWB Interface&lt;/div&gt;&lt;div&gt;3 X IMU&lt;/div&gt;&lt;div&gt;3 X Baro&lt;/div&gt;&lt;div&gt;1 X Magnetometer&lt;/div&gt;&lt;div&gt;1 X LiDAR (&lt;span class=&quot;st-h3&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;VL53L4CXV0DH/1),&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span class=&quot;st-h3&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;(For height - 5% accuracy&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span class=&quot;st-h3&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;upto 6m Indoors&amp;nbsp;and 1.8m Outdoors. Integrated MCU to run pre programmed firmware)&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span class=&quot;st-h3&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;915 MHz Custom Telemetry radio&amp;nbsp;&lt;/div&gt;&lt;div&gt;(SX1262) with USB-C Interface&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;1 X 84 pin B-to-B Mezzanine Header (&lt;span style=&quot;white-space: pre; color: light-dark(rgb(165, 214, 255), rgb(255, 255, 255));&quot;&gt;BB51-84AT-1-3HB&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1 X 84&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;pin B-to-B Mezzanine Socket&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;(&lt;span style=&quot;white-space: pre;&quot;&gt;BB52-84AT-1-3HB&lt;/span&gt;)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="471.38" width="196" x="1039" y="437.81" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-5" connectable="0" parent="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;Mezzanine&amp;nbsp;&lt;/div&gt;&lt;div&gt;Connector Stacked&lt;/div&gt;" vertex="1">
+          <mxGeometry x="974" y="673.5" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-6" edge="1" parent="1" source="iGwclVrzDPZG-cvXesvs-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="iGwclVrzDPZG-cvXesvs-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1137" y="832.31" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-7" connectable="0" parent="iGwclVrzDPZG-cvXesvs-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="SMA" vertex="1">
+          <mxGeometry relative="1" x="0.2171" y="-1" as="geometry">
+            <mxPoint x="-1" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;div&gt;GNSS Antenna&lt;/div&gt;&lt;div&gt;(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;GeoAstra ANT308)&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="120" x="1077" y="969.81" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-11" connectable="0" parent="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;Mezzanine&amp;nbsp;&lt;/div&gt;&lt;div&gt;Connector Stacked&lt;/div&gt;" vertex="1">
+          <mxGeometry x="614" y="675.81" as="geometry">
+            <mxPoint x="24" y="17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Test PCB&lt;/font&gt;&lt;/div&gt;&lt;div&gt;(2 Layer)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2 x Board to Board Mezzanine Connectors&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;5v Buck&lt;/div&gt;&lt;div&gt;3V3 LDO&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;USB-C PWR&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Breakout for Board to Board Connectors&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="245" width="172" x="678" y="-105" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;RTK-GNSS GND&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Station PCB&lt;/font&gt;&lt;br&gt;(2 Layer)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;1 X RTK GPS&amp;nbsp;&lt;/div&gt;&lt;div&gt;(U-BLOX ZED-F9P-04B,&amp;nbsp;&lt;/div&gt;&lt;div&gt;GeoAstra ANT308)&lt;br&gt;&lt;br&gt;USB-C 5V /w Data&amp;nbsp;&lt;/div&gt;&lt;div&gt;(Native on GNSS)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3V3 LDO&amp;nbsp;&lt;/div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1 X SMA&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="235" width="184" x="474" y="-100" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Custom Telemetry&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;GND Station PCB&lt;/font&gt;&lt;/div&gt;&lt;div&gt;(2 Layer)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;915 MHz Custom Telemetry radio&amp;nbsp;&lt;/div&gt;&lt;div&gt;(SX1262)&amp;nbsp;&lt;/div&gt;&lt;br&gt;USB-C 5V with UART Bridge&amp;nbsp;&lt;/div&gt;&lt;div&gt;(FTDI)&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3V3 LDO&amp;nbsp;&lt;/div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1 X SMA&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="235" width="184" x="875" y="-105" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="28" width="26" x="309" y="-82" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="28" width="26" x="309" y="-34" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="28" width="26" x="309" y="11" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="28" width="26" x="309" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="- Off The Shelf" vertex="1">
+          <mxGeometry height="30" width="90" x="332" y="-84" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="- GND Station Modules" vertex="1">
+          <mxGeometry height="30" width="129" x="332" y="-36" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="- Experimental PCBs" vertex="1">
+          <mxGeometry height="30" width="129" x="326" y="11" as="geometry" />
+        </mxCell>
+        <mxCell id="iGwclVrzDPZG-cvXesvs-23" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="- Required PCBs" vertex="1">
+          <mxGeometry height="30" width="129" x="315" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="dq8OgmJtP8p4AcBvqBWV-2" edge="1" parent="1" source="D0RLzR91enEYBCgCvxk8-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=classic;startFill=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="dq8OgmJtP8p4AcBvqBWV-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="763" y="543.81" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dq8OgmJtP8p4AcBvqBWV-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="2 X Dynamixel (Daisy Chained)" vertex="1">
+          <mxGeometry height="70" width="120" x="591" y="237.81" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
