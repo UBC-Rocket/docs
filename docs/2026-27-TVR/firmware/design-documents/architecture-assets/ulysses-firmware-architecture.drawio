@@ -13,13 +13,13 @@
         <mxCell id="h38GM3tZ3U6t5gg_rVZF-21" parent="h38GM3tZ3U6t5gg_rVZF-19" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=5" value="APP" vertex="1">
           <mxGeometry height="34.285714285714285" width="60" as="geometry" />
         </mxCell>
-        <mxCell id="h38GM3tZ3U6t5gg_rVZF-111" parent="h38GM3tZ3U6t5gg_rVZF-19" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Communication" vertex="1">
+        <mxCell id="h38GM3tZ3U6t5gg_rVZF-111" parent="h38GM3tZ3U6t5gg_rVZF-19" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Communication task" vertex="1">
           <mxGeometry height="40" width="100" x="95" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="h38GM3tZ3U6t5gg_rVZF-112" parent="h38GM3tZ3U6t5gg_rVZF-19" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Logging" vertex="1">
+        <mxCell id="h38GM3tZ3U6t5gg_rVZF-112" parent="h38GM3tZ3U6t5gg_rVZF-19" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Logging task" vertex="1">
           <mxGeometry height="40" width="100" x="95" y="90" as="geometry" />
         </mxCell>
-        <mxCell id="h38GM3tZ3U6t5gg_rVZF-113" parent="h38GM3tZ3U6t5gg_rVZF-19" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="State estimation" vertex="1">
+        <mxCell id="h38GM3tZ3U6t5gg_rVZF-113" parent="h38GM3tZ3U6t5gg_rVZF-19" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="State estimation task" vertex="1">
           <mxGeometry height="40" width="100" x="285" y="30" as="geometry" />
         </mxCell>
         <mxCell id="h38GM3tZ3U6t5gg_rVZF-120" parent="h38GM3tZ3U6t5gg_rVZF-19" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="..." vertex="1">
