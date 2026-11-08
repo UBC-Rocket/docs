@@ -62,7 +62,7 @@ The main layers are
  - `svc`
  - `io`
 
-![embed](https://app.diagrams.net?lightbox=1&edit=_blank#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FUBC-Rocket%2Fdocs%2Frefs%2Fheads%2Fmain%2Fdocs%2F2026-27-TVR%2Ffirmware%2Fdesign-documents%2Farchitecture-assets%2Fulysses-firmware-architecture.drawio)
+![embed](https://viewer.diagrams.net/?edit=_blank&dark=1#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FUBC-Rocket%2Fdocs%2Frefs%2Fheads%2Fmain%2Fdocs%2F2026-27-TVR%2Ffirmware%2Fdesign-documents%2Farchitecture-assets%2Fulysses-firmware-architecture.drawio#%7B%22pageId%22%3A%22wGStW79f3pciPTlo_cCO%22%7D)
 
 Each layer contain modules, which are self-contained libraries of code (i.e. the `io` layer may have
 modules for SPI, UART, and PWM).
