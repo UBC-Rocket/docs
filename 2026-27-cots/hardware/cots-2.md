@@ -2,10 +2,10 @@
 title: 'COTS 2'
 description: ''
 published: true
-date: 2026-11-08T21:50:56.000Z
+date: 2026-11-08T22:06:02.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T21:50:56.000Z
+dateCreated: 2026-11-08T22:06:02.000Z
 ---
 
 ![system-cots-2](/2026-27-cots/hardware/cots-2/screenshot-2026-10-14-at-12.12.50-am.png)

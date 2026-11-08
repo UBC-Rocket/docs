@@ -2,15 +2,14 @@
 title: 'SRAD bay'
 description: ''
 published: true
-date: 2026-11-08T21:50:56.000Z
+date: 2026-11-08T22:06:02.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T21:50:56.000Z
+dateCreated: 2026-11-08T22:06:02.000Z
 ---
 
 ## Overview
 The SRAD bay is the Student Research and Developed bay. It essentially covers most of the same functionalities as the COTS bays, but its cooler because we make the boards ourselves.
-
 
 ## System diagram
 to be added

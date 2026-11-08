@@ -2,10 +2,10 @@
 title: 'Cad and controls integration'
 description: ''
 published: true
-date: 2026-11-08T21:50:56.000Z
+date: 2026-11-08T22:06:02.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T21:50:56.000Z
+dateCreated: 2026-11-08T22:06:02.000Z
 ---
 
 
@@ -26,7 +26,6 @@ f. Run simulation.
 ![main-body-example](/2026-27-tvr/controls/simulations/main-body-example.png)
 ![gimbal-example-model](/2026-27-tvr/controls/simulations/gimbal-example-model.png)
 ![thrust-calculation](/2026-27-tvr/controls/simulations/thrust-calculation.png)
-
 
 **Discussion:**
 

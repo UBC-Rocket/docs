@@ -2,10 +2,10 @@
 title: 'Architecture overview'
 description: ''
 published: true
-date: 2026-11-08T21:50:56.000Z
+date: 2026-11-08T22:06:02.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T21:50:56.000Z
+dateCreated: 2026-11-08T22:06:02.000Z
 ---
 
 Introduction
@@ -58,8 +58,6 @@ MMOI    : mass moment of inertia of rocket [scalar]
 omega   : angular velocity [1x3]
 
 %}
-
-
 
 syms q_des q_meas tau_gim r_gim t m a MMOI omega
 

@@ -2,15 +2,14 @@
 title: '2 axis PID multibody simulation'
 description: ''
 published: true
-date: 2026-11-08T21:50:56.000Z
+date: 2026-11-08T22:06:02.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T21:50:56.000Z
+dateCreated: 2026-11-08T22:06:02.000Z
 ---
 
 **Introduction:**
 The objective of this project was to explore the tools Simscape Multibody offers when it comes to simulating our control system for the rocket. Through the learning process, the project evolved into an implementation that can be adapted to be used with the more comprehensive control architecture.
-
 
 **Main Body:**
 The process started with completing the onramp courses offered by Matlab. Particularly the Simscape Onramp and Multibody Simulation Onramp. These courses are very valuable resources when it comes to reaching competency with simscape and are highly recommended as a first resource if the reader wishes to learn more. 
@@ -24,7 +23,6 @@ _Figure 1: The overview of the plant. Including the Body and Motor, actuation, a
 
 ![2-axis-pid-2](/2026-27-tvr/controls/simulations/2-axis-pid-2.png)
 _Figure 2: The control algorithm for the thrust vectoring. This algorithm uses two PID loops to control the rocket orientation in the XZ and YZ planes. The limits for gimbal angles are set to 14 degrees._
-
 
 Plant:
 

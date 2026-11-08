@@ -2,10 +2,10 @@
 title: 'Ulysses-FC_V3.0 Project Log'
 description: ''
 published: true
-date: 2026-11-08T21:50:56.000Z
+date: 2026-11-08T22:06:02.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T21:50:56.000Z
+dateCreated: 2026-11-08T22:06:02.000Z
 ---
 
 ## Date: 13/09/2026
@@ -255,7 +255,6 @@ Design freeze date for flight controller is 18/05/26
 - Decided on SAFEA1G58KA0F00R15 for SAW, made for L1/GLONASS (Faster RTK fix due to access to GLONASS satellites as well), 1.6dB insertion loss, 32dB min rejection @ 915MHz, good stock and suprisingly very cheap in LCSC.
 
 - Prefer QPQ1060 cause it is temperature compensated but LCSC does not stock Qorvo SAW's. Sad.
-
 
 ## Date 16/10/2026
 

@@ -2,10 +2,10 @@
 title: 'Systems and Controls Information'
 description: ''
 published: true
-date: 2026-11-08T21:50:56.000Z
+date: 2026-11-08T22:06:02.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T21:50:56.000Z
+dateCreated: 2026-11-08T22:06:02.000Z
 ---
 
 For an overview and basic understanding of systems and controls, please read the following GeeksforGeeks article; they do a pretty good job of explaining what a control system is:
@@ -17,8 +17,6 @@ https://www.geeksforgeeks.org/electronics-engineering/control-system/
 Here’s also an excerpt from LibreTexts that goes into more theoretical detail:
 
 https://eng.libretexts.org/Bookshelves/Introductory_Engineering/EGR_1010%3A_Introduction_to_Engineering_for_Engineers_and_Scientists/14%3A_Fundamentals_of_Engineering/14.14%3A_Signals_and_Systems_(Control_systems)
-
-
 
 ## The Crux:
 
@@ -33,8 +31,6 @@ https://eng.libretexts.org/Bookshelves/Introductory_Engineering/EGR_1010%3A_Intr
 - Controls can be applied to systems for error correction, when the actual behaviour of the model deviates from the expected behaviour. The most common approach to error correct is using feedback
 
 - When approaching controls, think about how the subsystems and components affect each other. What are things you can modify? How will the rest of the system respond? 
-
-
 
 ## Final Thoughts:
 

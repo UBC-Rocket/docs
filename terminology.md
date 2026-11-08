@@ -2,10 +2,10 @@
 title: 'Terminology / Acronyms'
 description: ''
 published: true
-date: 2026-11-08T21:50:56.000Z
+date: 2026-11-08T22:06:02.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T21:50:56.000Z
+dateCreated: 2026-11-08T22:06:02.000Z
 ---
 
 If you are adding new terms or acronyms, place them underneath the subheading corresponding to the first letter in the term or acronym.

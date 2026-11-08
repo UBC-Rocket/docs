@@ -2,10 +2,10 @@
 title: 'Design_Sync_04-10-26 Notes'
 description: ''
 published: true
-date: 2026-11-08T21:50:56.000Z
+date: 2026-11-08T22:06:02.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T21:50:56.000Z
+dateCreated: 2026-11-08T22:06:02.000Z
 ---
 
 ## Issues Last Year
@@ -14,31 +14,25 @@ dateCreated: 2026-11-08T21:50:56.000Z
 
 **Solution:** Quarterly design plan with design freeze date at least before 1.5 months
 
-
 - Sensor selection did not cover all the parameter data needed by controls like baro's resolution is too low to detect takeoff and landing, GNSS resolution too low for 3D mapping etc.
 
 **Solution:** LiDAR to detect takeoff and landing, RTK-GNSS for high resolution 3D surveying and UWB for indoor 3D Mapping
-
 
 - Almost no sensor validation
 
 **Solution:** Firmware to do IMU and Baro raw data validation as soon as possible, MAG noise characterisation as well.
 
-
 - Didn’t measure accurate gimbal backlash (eye balled it)
 
 **Solution:** TVR Mech to measure backlash of dynamixel - direct drive and indirect drive
-
 
 - No variable thrust control yet, just static
 
 **Solution:** Differential thrust control will be implemented, active controlled fins explored as well
 
-
 - Horizontal Battery mounting kept on shifting drone's COM
 
 **Solution:** Vertical battery mounting, aligned across central axis
-
 
 - We lost lots of points for lack of validation / documentation (justifying decisions)
 
@@ -156,7 +150,6 @@ dateCreated: 2026-11-08T21:50:56.000Z
 - Print resin gears
 
 - Direct Drive
-
 
 ### New Legs
 

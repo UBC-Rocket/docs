@@ -2,10 +2,10 @@
 title: 'Board to Board Connector Pin Assignment'
 description: ''
 published: true
-date: 2026-11-08T21:50:56.000Z
+date: 2026-11-08T22:06:02.000Z
 tags: 
 editor: markdown
-dateCreated: 2026-11-08T21:50:56.000Z
+dateCreated: 2026-11-08T22:06:02.000Z
 ---
 
 ## List of Interfaces / PWR needed between boards: (Pin Budget)
@@ -47,7 +47,6 @@ Socket:
 
 ![Socket](/2026-27-tvr/hardware/images/stwxe-bb52-84at-1-3hb.png)
 ![Datsheet](/2026-27-tvr/hardware/images/stwxe-bb52-84at-1-3hb-datasheet.png)
-
 
 **Specifications:**
 
