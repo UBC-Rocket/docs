@@ -454,3 +454,31 @@ Dont forget the 12V-GND thing
 ## Date 06/11/2026
 
 - Most of routing and layout done, doing some touchups now and will start on silkscreen and DRC soon
+
+- Fixed all the pending changes
+
+## Date 07/11/2026
+
+- Read up more on Coplanar Waveguide routing, and corrected the impedence profile to coplanar. Defined proper V-to-V spacing and V-to-T spacing. Added proper shielding vias with a poly cutout for a defined trace to same layer pour spacing.
+
+- Implemented changes as per shadab's review, discussion scheduled tmr for splitting the board
+
+## Date 08/11/2026
+
+- After a lot of discussions, sticking with the present board. My mistake, should have brought this up long before and had a proper discussion.
+
+- Per Annie's suggestion, moved +12V to backplane.
+
+- Spent most of the time just reviewing it.
+
+## Date 09/11/2026
+
+- Looks like the stack can be mounted with some optimizations, not ideal but works. My mistake, should have co-ordinated with mech long before
+
+- Alex agreed to review it (Yay). Looking forward to his suggestions.
+
+## Date 10/11/2026
+
+- Alex had a lot of useful suggestions, mostly related to DFT / DFM. will start implementing them.
+
+- Some very good practices to follow in future as well like 0R on interfaces, makes testing / debugging easier. 10R/100R (Some value) on signal lines to use as jumper and acts as a low pass filter limiting the rise time, reduces overshoot and very good from EMI prespective. Add more notes and context, assuming somebody who nows nothing about the board is reviewing, they should be able to understand.
