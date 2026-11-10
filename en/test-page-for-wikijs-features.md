@@ -2,7 +2,7 @@
 title: Test page for WikiJS features
 description: This is a page used for testing WikiJS features
 published: true
-date: '2026-11-10T06:18:44.568Z'
+date: '2026-11-10T06:19:46.744Z'
 tags: []
 editor: visual
 dateCreated: '2026-11-10T06:18:44.568Z'
@@ -64,6 +64,8 @@ int main(void)
 ::block-pdf{src="DS_vl53l4cx.pdf" data-line="54" data-line-end="54"}
 ::
 
+asd
+
 ::block-tab{label="First tab" data-line="57" data-line-end="59"}
 Content of the first tab.
 
@@ -75,6 +77,9 @@ Content of the second tab.
 ::
 
 ::block-tab{label="First tab" data-line="67" data-line-end="69"}
+
+asd
+
 Content of the first tab.
 
 ::
