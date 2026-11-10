@@ -2,7 +2,7 @@
 title: Test page for WikiJS features
 description: This is a page used for testing WikiJS features
 published: true
-date: '2026-11-10T06:21:23.403Z'
+date: '2026-11-10T06:21:34.868Z'
 tags: []
 editor: markdown
 dateCreated: '2026-11-10T06:18:44.568Z'
@@ -60,42 +60,4 @@ int main(void)
     printf("test")
 }
 ```
-
-::block-pdf{src="DS_vl53l4cx.pdf" data-line="54" data-line-end="54"}
-::
-
-asd
-
-::block-tab{label="First tab" data-line="57" data-line-end="59"}
-Content of the first tab.
-
-::
-
-::block-tab{label="Second tab" data-line="62" data-line-end="64"}
-Content of the second tab.
-
-::
-
-::block-tab{label="First tab" data-line="67" data-line-end="69"}
-
-asd
-
-Content of the first tab.
-
-::
-
-::block-tab{label="Second tab" data-line="72" data-line-end="74"}
-Content of the second tab.
-
-::
-
-::block-tab{label="First tab" data-line="77" data-line-end="79"}
-Content of the first tab.
-
-::
-
-::block-tab{label="Second tab" data-line="82" data-line-end="84"}
-Content of the second tab.
-
-::
 
