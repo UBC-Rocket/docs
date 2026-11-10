@@ -2,9 +2,9 @@
 title: Test page for WikiJS features
 description: This is a page used for testing WikiJS features
 published: true
-date: '2026-11-10T06:21:34.868Z'
+date: '2026-11-10T06:21:41.232Z'
 tags: []
-editor: markdown
+editor: visual
 dateCreated: '2026-11-10T06:18:44.568Z'
 ---
 
