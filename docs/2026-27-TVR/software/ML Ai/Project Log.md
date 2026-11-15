@@ -57,3 +57,19 @@ Start with a lightweight dynamics model for the model to build off of, and have 
 Hybrid framework, integrating GRUs with the KF to eliminate the need for Kalman Gain computations and explicit noise modelling and instead have the GRU model the noise. Works well for application where noise is colored and varies with time.
 
 CKFNet uses 151k parameters, enabling real-time deployment. More efficient than KalmanNet.
+
+## DATE: November 15th, 2026
+
+**Project Switch:** Focus is now to use ML for predictive trajectory control. Model will run on the ground instead of on the rocket. Goal is to provide a predicted trajectory in real-time to send to the drone instead of a static hardcoded location. Space is no longer a primary constraint, so the model can be larger. The main focus is speed so it can provide real-time predictions.
+
+### Language Choice
+
+Python is a viable choice for prototyping and model training as it is easy for prototyping and R&D. The final deployment will need to be in C/C++ for real-time updates as Python is too slow.
+
+### Resources
+
+[Learning-Based Model Predictive Control](https://dl.acm.org/doi/10.1145/3788108.3788517)
+
+[Sampling for Model Predictive Trajectory](https://arxiv.org/pdf/2404.09657)
+
+[Neural Network-Based Model Predictive Trajectory Tracking Control](https://www.mdpi.com/1424-8220/25/22/6877)
