@@ -73,3 +73,14 @@ Python is a viable choice for prototyping and model training as it is easy for p
 [Sampling for Model Predictive Trajectory](https://arxiv.org/pdf/2404.09657)
 
 [Neural Network-Based Model Predictive Trajectory Tracking Control](https://www.mdpi.com/1424-8220/25/22/6877)
+
+## DATE: November 22nd, 2026
+
+### Output Rate
+
+Examined typical output rates for LB-MPC for drone trajectory control. Aim for 100 Hz output rate, but minimum should be 50 Hz.
+
+[LB-MPC for Quadrotors](https://dl.acm.org/doi/10.1145/3687488.3687518)
+[Tiny LB-MPC](https://arxiv.org/html/2410.23634v3)
+
+A proposed architecture is to use a Long Short-Term Memory (LSTM) network as a prediction model for the MPC. Works best for non-linear systems. Could also use GRU which would provide faster output rate.
