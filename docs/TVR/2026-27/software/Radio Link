@@ -1,0 +1,63 @@
+HELIOS PROTOS
+
+First thing I figured out: the helios-protos repo is just message definitions, not actual running code. It's all Protocol Buffers (.proto files), which is a way of describing what a message looks like so different programs can send each other data. Repo: https://github.com/helios-data/helios-protos
+
+It has four folders, so I went through them one by one.
+
+transport/protocol.proto
+- This is how the different parts of Helios talk to the Helios core. It works like a message board: parts post things and other parts sign up to hear about them
+- A part connects with a handshake that says which protocol version it uses and its address (like "rocket.stage1.gps")
+- After that it can publish an event, ask for the current event at an address, or subscribe and unsubscribe to updates
+- If something goes wrong, it gets an EventError back (NOT_FOUND, INVALID_REQUEST, INTERNAL_ERROR or TIMEOUT)
+- Everything gets wrapped in one envelope called TransportMessage, which holds exactly one of those message types
+- An Event has an id, a name, a timestamp, the source address, and a data field that's just raw bytes
+- My guess is the other messages (like telemetry) get packed into that data field. telemetry.proto says the vehicle and time come from the Event envelope, which fits
+
+config/component.proto
+- This describes the whole system as a tree of components
+- Each leaf can have a Docker spec (image, tag, ports, volumes, devices, environment variables)
+- So I think Helios starts each component as its own Docker container
+- If a leaf has no Docker spec, it just doesn't get started
+
+tvr/
+- Telemetry for the TVR vehicle. I'm guessing that's a hovering test vehicle, because the flight states are rise, hover, lower and e-stop, and it has thrust vector actuators. It doesn't look like the big rocket
+- TelemetryState goes from the flight computer to the ground 10 times a second. It has position, velocity, attitude, raw IMU samples, guidance setpoints, control output, actuators, motors, UWB tags and battery
+- Almost every field is optional. In protobuf, a field that isn't set costs zero bytes, which is why that works
+- SystemStatus goes out once a second with the flight state, whether the IMU is healthy, and radio packet counts
+
+cots/
+- This is data from other sources, plus the SRAD flight computer
+- srad.proto is the SRAD flight computer's telemetry packet (barometers, Kalman filter altitude and velocity, GPS, RunCam status). It looks like what the rocket sends right now
+- aprs.proto and nmea.proto are decoded APRS tracker packets and GPS sentences
+- landing_prediction.proto is the output of the landing predictor (best guess, a cloud of Monte Carlo points, 50% and 90% ellipses, wind) plus its config
+
+Stuff that confused me or that I want to remember:
+- There are two different FlightState enums. tvr/common.proto has IDLE, ESTOP, RISE, HOVER, LOWER, ARMED, LANDED. cots/srad.proto has STANDBY, ASCENT, MACH_LOCK, DROGUE_DESCENT, MAIN_DESCENT, LANDED. They're in different packages so they don't clash, but the same number means different things
+- tvr/status.proto imports "common.proto" with no folder in front, so protoc needs tvr/ as an include path or it won't find it
+- LandingPrediction stores flight_state as a double, which seems odd for an enum
+
+
+MAVLINK
+
+MAVLink packs data into small messages with a checksum and sends them over a radio or cable. It doesn't encrypt anything or check whether a command is safe.
+
+- Messages are defined in XML files called dialects, and a tool called mavgen makes the C and Python code from them
+- Version 2 packets start with 0xFD and add 12 bytes of overhead (25 if signed)
+- Every packet has a sequence number, so it's easy to see when one got lost
+- Both sides have to use the exact same XML. If they don't, every packet quietly fails the checksum and nothing tells you why
+- Telemetry doesn't get resent if it's lost. Commands get acknowledgements and retries
+- A resent command can run twice, so commands should say "set armed to 1", never "toggle"
+- Rocket is system 1, component 1. Ground station is system 255, component 190
+- Every node sends a HEARTBEAT once a second. Missing 4 or 5 in a row means the link is down
+- Our custom messages are in dialect/rocket.xml: ROCKET_STATUS (message 30000) and MAV_CMD_ROCKET_SET_PYRO_ARM (command 50000)
+- Some standard messages max out too low for a rocket. GLOBAL_POSITION_INT speed tops out at 327.67 m/s and SCALED_IMU acceleration at about 32.8 g
+- The rocket should decide launch, apogee and parachute deployment by itself. Arming should always be two steps, with a physical switch as backup
+
+
+PROTOS AND MAVLINK COMPARISON
+
+- They seem to be two different layers. The protos only say what's inside a message
+- Protobuf doesn't have framing, a checksum or a sequence number. Over a radio, something else has to find where each message starts and catch damaged ones. MAVLink does all that itself
+- Adding a field in protobuf is easy and old code keeps working. With MAVLink, both sides have to be regenerated from the same XML (except for extension fields)
+- The rocket already sends its telemetry as protobuf. If we use MAVLink on the radio, one idea is a small program on the ground that reads the MAVLink and publishes it into Helios as events
+- That's just my idea. Nothing is decided
