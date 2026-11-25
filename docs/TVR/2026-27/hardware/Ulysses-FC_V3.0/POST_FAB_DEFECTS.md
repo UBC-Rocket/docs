@@ -82,26 +82,6 @@ _None found._
 
 ---
 
-## New defect, template (copy into the matching severity section)
-
-```
-### <ID>: <short title>
-- **Date found:**
-- **Status:**
-- **Subsystem:**
-- **Subsystem-Priority:**
-- **Description:**
-- **Root cause:**
-- **Impact on this board:**
-- **Mitigation (this board):**
-- **Fix (next rev):**
-- **Process lesson:**
-- **Technical lesson:**
-- **Verification:**
-```
-
----
-
 ## Next Rev action list (rolled up from above, most severe first)
 
 - M001, CAN TXD/RXD straight-through

@@ -482,3 +482,7 @@ Dont forget the 12V-GND thing
 - Alex had a lot of useful suggestions, mostly related to DFT / DFM. will start implementing them.
 
 - Some very good practices to follow in future as well like 0R on interfaces, makes testing / debugging easier. 10R/100R (Some value) on signal lines to use as jumper and acts as a low pass filter limiting the rise time, reduces overshoot and very good from EMI prespective. Add more notes and context, assuming somebody who nows nothing about the board is reviewing, they should be able to understand.
+
+## Date 24/11/2026
+
+- Did some post fab review of fc, unfortunately found two mistakes not critical but still sad though. Documented them. Will keep on reviewing it.
