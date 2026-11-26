@@ -77,16 +77,16 @@ _None found._
 ### m002: SAW Filter on RTK-GNSS is L1 only
 - **Date found:** 24/11/2026
 - **Status:** Deferred
-- **Subsystem:** RTK-GNSS, RADIO
-- **Subsystem-Priority:** RTK-GNSS-High, RADIO-Low
-- **Description:** ESD/TVS part on the RF line spec'd at 3.3V VRWM, but the 1W (+30 dBm) carrier is about 7 Vrms, about 10 Vpeak into 50 ohm under ideal conditions (higher under realistic VSWR). The part would clamp into or be damaged by the transmit signal.
-- **Root cause:** Spec'd the protection voltage as if for a digital or logic signal; did not work out the RF carrier Vpeak/Vrms before selecting the part.
-- **Impact on this board:** If populated, distorts or absorbs TX and/or destroys the diode.
-- **Mitigation (this board):** DNP the part or order new TVS with higher VRWM and same footprint (0201). If DNP, lose RF-line ESD protection (acceptable).
-- **Fix (next rev):** Low-capacitance TVS with VRWM comfortably above the worst-case (post-VSWR) RF peak (well above 10 Vpeak, for example 15V VRWM or higher), keeping the low capacitance that made the original part suitable.
-- **Process lesson:** Flagged this while designing, was meaning to look into RF Carrier wave diagrams, Vpeak and Vrms since there is nothing called logic level in RF signal. Slipped my mind and specced it like for a digital signal.
-- **Technical lesson:**RF carrier: Vrms = sqrt(P * Z), Vpeak = Vrms * sqrt(2), derate for VSWR. (Just ohms law)
-- **Verification:**
+- **Subsystem:** RTK-GNSS
+- **Subsystem-Priority:** High
+- **Description:** GNSS front-end SAW (SAFEA1G58KA0F00R15) is an L1-cluster-only filter (passband ~1559 to 1606 MHz), but the rest of the chain (ZED-F9P) is dual-band L1/L2 capable. The L1-only SAW limits the receiver to L1 RTK, under-using the dual-band hardware. The chain could support L1/L2; the SAW was spec'd below that capability.
+- **Root cause:** Selected an L1-band SAW without accounting for the F9P's dual-band capability; treated the GNSS front end as L1-only by default rather than matching the SAW to the chain's L1/L2 potential.
+- **Impact on this board:** Receiver runs L1-only RTK. For our use case and range from GCS, L1 RTK will probably achieve the same cm accuracy as L1/L2 because dual band is primarily helpful in maintaning the cm level accuracy over long range (10s of Km). The real L1 weaknesses are slower convergence (time to first fix) and slower re-acquisition after lock loss.
+- **Mitigation (this board):** Keep the L1 SAW and run L1-only RTK. Will likely not notice much difference in performance. Floating idea: Could DNP the SAW in one board and run a jumper to bypass it, compare this reworked board to populated for difference in performance.
+- **Fix (next rev):** Consider move to dual-band L1/L2. Note: no single L1/L2 SAW exists in this (or any) footprint, since L1 (~1575) and L2 (~1227) are ~350 MHz apart, too wide for one SAW. Dual-band requires an architecture change: a dual-band active antenna (preferred, brings its own band filtering + LNA, keeps out-of-band rejection against the onboard 915 TX), or two per-band SAWs, or a wideband filter.
+- **Process lesson:** Match each part's spec to the system's capability, not to a default assumption. A dual-band-capable receiver was bottlenecked by an L1-only front-end filter chosen without checking what the chain could support.
+- **Technical lesson:** One SAW cannot pass both L1 and L2 (bands too far apart). At short baseline (~100m) single-band L1 RTK reaches cm accuracy because the ionospheric error dual-band removes is self-cancelling over short baselines; dual-band's remaining value is faster convergence, faster re-acquisition after dynamic lock loss, and lower false-fix risk. How much that matters depends on IMU/RTK fusion quality (good fusion bridges GNSS dropouts, reducing the need for dual-band).
+- **Verification:** <rework one board to dual-band, compare against L1 board, focus the comparison on behavior during/after lock loss and dynamics, not steady hover>
 ---
 
 # COSMETIC
