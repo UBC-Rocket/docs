@@ -50,7 +50,7 @@ _None found._
 - **Description:** MCU-to-transceiver TXD/RXD routed as a UART-style crossover (TX to RX) instead of straight-through. A controller-to-transceiver link is straight (MCU TX to transceiver TXD, MCU RX to transceiver RXD); the transceiver is a translator, not a peer.
 - **Root cause:** Applied the UART crossover mental model to a transceiver interface.
 - **Impact on this board:** CAN non-functional. Likely not going to used , so no operational impact.
-- **Mitigation (this board):** None needed; CAN unused.
+- **Mitigation (this board):** Rework the lines and swap them if and when CAN is needed; CAN unused for now.
 - **Fix (next rev):** Route TXD/RXD straight-through.
 - **Process lesson:** Do not assume conventions. Always double check when designing something you have not done before.
 - **Technical lesson:** A Transciever is a PHY not a device / controller. It generates the voltage levels in a bus. In a PHY, TXD means the data to be sent to the bus and RXD mean the data recieved from the bus so TXD to controller TX and RXD to Controller RX is correct.
@@ -74,6 +74,19 @@ _None found._
 - **Technical lesson:**RF carrier: Vrms = sqrt(P * Z), Vpeak = Vrms * sqrt(2), derate for VSWR. (Just ohms law)
 - **Verification:**
 
+### m002: SAW Filter on RTK-GNSS is L1 only
+- **Date found:** 24/11/2026
+- **Status:** Deferred
+- **Subsystem:** RTK-GNSS, RADIO
+- **Subsystem-Priority:** RTK-GNSS-High, RADIO-Low
+- **Description:** ESD/TVS part on the RF line spec'd at 3.3V VRWM, but the 1W (+30 dBm) carrier is about 7 Vrms, about 10 Vpeak into 50 ohm under ideal conditions (higher under realistic VSWR). The part would clamp into or be damaged by the transmit signal.
+- **Root cause:** Spec'd the protection voltage as if for a digital or logic signal; did not work out the RF carrier Vpeak/Vrms before selecting the part.
+- **Impact on this board:** If populated, distorts or absorbs TX and/or destroys the diode.
+- **Mitigation (this board):** DNP the part or order new TVS with higher VRWM and same footprint (0201). If DNP, lose RF-line ESD protection (acceptable).
+- **Fix (next rev):** Low-capacitance TVS with VRWM comfortably above the worst-case (post-VSWR) RF peak (well above 10 Vpeak, for example 15V VRWM or higher), keeping the low capacitance that made the original part suitable.
+- **Process lesson:** Flagged this while designing, was meaning to look into RF Carrier wave diagrams, Vpeak and Vrms since there is nothing called logic level in RF signal. Slipped my mind and specced it like for a digital signal.
+- **Technical lesson:**RF carrier: Vrms = sqrt(P * Z), Vpeak = Vrms * sqrt(2), derate for VSWR. (Just ohms law)
+- **Verification:**
 ---
 
 # COSMETIC
