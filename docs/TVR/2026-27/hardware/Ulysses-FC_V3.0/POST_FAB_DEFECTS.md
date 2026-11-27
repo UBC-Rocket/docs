@@ -86,7 +86,7 @@ _None found._
 - **Fix (next rev):** Consider removing the SAW and use full L1/L2 capabilities. But if SAW is needed, dual band L1/L2 SAW is rare to find. Sourcing will be diffucult. (Qualcomm has a few options but not stocked in LCSC)
 - **Process lesson:** Match each part's spec to the system's capability, not to a default assumption. A dual-band-capable receiver was bottlenecked by an L1-only front-end filter chosen without checking what the chain could support and advantages it could add.
 - **Technical lesson:** One SAW cannot pass both L1 and L2 (bands too far apart), so a dual band SAW is just two SAW's in one package. At short baseline (~100m) single-band L1 RTK reaches cm accuracy because the ionospheric error dual-band removes is self-cancelling over short baselines; dual-band's remaining value is faster convergence and faster re-acquisition after dynamic lock loss.
-- **Verification:** <rework one board to dual-band, compare against L1 board, focus the comparison on behavior during/after lock loss and dynamics, not steady hover>
+- **Verification:** <rework one board to dual-band, compare against L1 board, focus the comparison on behavior during/after lock loss and dynamics, not steady hover
 ---
 
 # COSMETIC
