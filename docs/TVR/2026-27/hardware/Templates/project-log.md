@@ -5,7 +5,7 @@ Capture as you work. Reasoning and lessons inline are the point, not rigid struc
 
 **Project:** <name and rev>     
 **Maintainer:** <name>     
-**Started:** <dd/mm/yyyy>    
+**Started:** <yyyy/mm/dd>    
 
 Conventions (optional tags for findability later):   
 - **Important:** flag a technical insight or lesson worth finding again.     
@@ -15,12 +15,19 @@ Conventions (optional tags for findability later):
 ---
 
 ## Open Action Items
+ 
+Live list of open items. Add here the moment something comes up; check off and move to Closed Action Items when done
 
-Live list of open items. Add here the moment something comes up; remove when done.
-
+ 
 - [ ] <open item>
+<details>
+<summary>Closed Action Items (click to expand)</summary>
 
-## Date: <dd/mm/yyyy>
+- [x] <finished item> (yyyy/mm/dd, one-line resolution or 'dropped: reason')    
+
+</details>
+
+## Date: <yyyy/mm/dd>
 
 - <what you did, decided, hit, or learned, in bullets>
 
@@ -30,7 +37,7 @@ Live list of open items. Add here the moment something comes up; remove when don
 
 - **Mistake:** <what went wrong> / <the correct way>.
 
-## Date: <dd/mm/yyyy>
+## Date: <yyyy/mm/dd>
 
 - <...>
 

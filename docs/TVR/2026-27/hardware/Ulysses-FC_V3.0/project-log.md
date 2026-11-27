@@ -5,7 +5,7 @@ Capture as you work. Reasoning and lessons inline are the point, not rigid struc
 
 **Project:** Ulysses-FC V3.0    
 **Maintainer:** Gugan Sivakumar    
-**Started:** 13/09/2026
+**Started:** 2026-09-13
 
 Conventions (optional tags for findability later):
 - **Important:** flag a technical insight or lesson worth finding again.    
@@ -20,7 +20,14 @@ Live list of open items. Add here the moment something comes up; remove when whe
 
 - [ ] <open item>
 
-## Date: 13/09/2026
+<details>
+<summary>Closed Action Items (click to expand)</summary>
+
+- [x] <finished item> (yyyy-mm-dd, one-line resolution or 'dropped: reason')
+
+</details>
+
+## Date: 2026-09-13
 
 - We are going for a new FC for TVR because PCIe sucks, very difficult to mount and we are not using half the things in present FC.
 
@@ -36,7 +43,7 @@ Live list of open items. Add here the moment something comes up; remove when whe
 
 - Added a pin assignment doc in the wiki and started work on it.
 
-## Date: 14/09/2026
+## Date: 2026-09-14
 
 - Firmware and Controls raised a good point that we have no way to calculate yaw (absolute heading), started looking into that.
 
@@ -44,7 +51,7 @@ Live list of open items. Add here the moment something comes up; remove when whe
 
 - Started discussion on NTRIP vs base receiver for RTK error data with firmware, likely going with NTRIP.
 
-## Date: 15/09/2026
+## Date: 2026-09-15
 
 - I have decided on a board to board connector, BB51-84AT-1-3HB 84 pin, 1mm pitch, keyed, only about 1.5 CAD and decent stock in LCSC. Pin assignment mostly done as well.
 
@@ -58,13 +65,13 @@ Live list of open items. Add here the moment something comes up; remove when whe
 
 - Firmware going with NTRIP and some free service for RTCM packets.
 
-## Date: 18/09/2026
+## Date: 2026-09-18
 
 - Went down a rabbit hole and had a scare about data rates and transmit power of RFD, comparison with SX1262 and looked at alternative ICs but all good. Just was misunderstanding things.
 
 - Started on a high level block diagram for custom telemetry front end, will take my time with it and calculate/simulate everything.
 
-## Date: 19/09/2026
+## Date: 2026-09-19
 
 - Finished IMU schematics, going with ICM-40609-D for now. Firmware and Controls happy with it. Will confirm with Shadab tomorrow.
 
@@ -78,7 +85,7 @@ Live list of open items. Add here the moment something comes up; remove when whe
 
 - After getting confused and trying a lot of combinations, finalized bias tee values. Schematic updated with bias tee.
 
-## Date: 20/09/2026
+## Date: 2026-09-20
 
 - Added mezzanine connector (BB51-84AT-1-3HB) to Altium library, unfortunately no CAD model available for socket.
 
@@ -94,7 +101,7 @@ Live list of open items. Add here the moment something comes up; remove when whe
 
 - Still need to add VBAT in pin assignment.
 
-## Date: 22/09/2026
+## Date: 2026-09-22
 
 - Added VBAT to pin assignment doc, very little pins left. May need to move things around.
 
@@ -122,7 +129,7 @@ Live list of open items. Add here the moment something comes up; remove when whe
 
 - Flash schematic done.
 
-## Date: 23/09/2026
+## Date: 2026-09-23
 
 - Learnt about RF PA vs gain blocks, gain blocks for ideally high impedance signals, prioritize signal conditioning over gain and they provide a max gain of about 30dB generally so suited if only a small amount of gain is needed. PAs maximise gain even at the cost of matching or signal conditioning, they are rare to find under like 10dB gain but can provide very high gain.
 
@@ -140,17 +147,17 @@ Live list of open items. Add here the moment something comes up; remove when whe
 
 - Some progress on MCU schematic.
 
-## Date: 24/09/2026
+## Date: 2026-09-24
 
 - Took day off, so all day worked on FC.
 
-## Date: 26/09/2026
+## Date: 2026-09-26
 
 - Some progress on schematics.
 
 - Spent most of time in preparation for build day.
 
-## Date: 27/09/2026
+## Date: 2026-09-27
 
 - Had a discussion with Ken on all connectors on backplane, and decided on MaUWB, RFD and LA_PWM (DNP) on FC and rest on backplane and eventually on ESC.
 
@@ -158,7 +165,7 @@ Live list of open items. Add here the moment something comes up; remove when whe
 
 - Some progress on FC schematic and ioc. Getting there.
 
-## Date: 02/10/2026
+## Date: 2026-10-02
 
 - Finished RFD connector schematic.
 
@@ -172,7 +179,7 @@ Live list of open items. Add here the moment something comes up; remove when whe
 
 - Testing planned for mag and some mu metal shielding can help.
 
-## Date: 03/10/2026
+## Date: 2026-10-03
 
 - Except radio, all the schematics are done.
 
@@ -188,7 +195,7 @@ Live list of open items. Add here the moment something comes up; remove when whe
 
 - Updated mezzanine pinout to make routing easier for backplane.
 
-## Date: 04/10/2026
+## Date: 2026-10-04
 
 - Had system design sync for FC and backplane, got cooked.
 
@@ -204,7 +211,7 @@ Consider optical flow sensor for position hold (considering for phase 2).
 
 Add a SD card to store raw sensor data.
 
-Design freeze date for flight controller is 18/05/26.
+Design freeze date for flight controller is 2026-05-18.
 
 - Some progress on radio schematic, started adding the matching network and bias tee components.
 
@@ -222,7 +229,7 @@ Design freeze date for flight controller is 18/05/26.
 
 - Gain block schematic is done.
 
-## Date: 10/10/2026
+## Date: 2026-10-10
 
 - Finished SD-CARD schematic, added some missing bulk caps and did a schematic review. Looks okay for now.
 
@@ -230,7 +237,7 @@ Design freeze date for flight controller is 18/05/26.
 
 - A lot of soldering practice, getting better but need more practice.
 
-## Date: 11/10/2026
+## Date: 2026-10-11
 
 - Almost done with component placement, quick summary is all RF (GNSS and radio) on bottom layer, opposite corners for max separation. All IMU centered around COG / COM and close to each other in bottom layer. Buzzer on top and mag on top as well but opposite side for max separation. Radio SMAs 45 deg rotated to make routing easier and all SMA on top layer, vertical and THT. Everything that needs 12V is on one corner, near to mezzanine 12V, plan is to use a single polygon for 12V. CAN on bottom, because space in bottom.
 
@@ -238,7 +245,7 @@ Design freeze date for flight controller is 18/05/26.
 
 - **Important:** Jason asked a good question about load line matching, realized that RFO impedance will change based on transmit power so shouldn't it be load line matched? Quick research suggests that ideally yes but still it is not done often because matching to highest power still works because below that it will have power loss but will be small and the power dependence impedance is only a part of total impedance so efficiency will drop down to like 70% at lower power.
 
-## Date: 12/10/2026
+## Date: 2026-10-12
 
 - Finished high level component placement and most low level component placement.
 
@@ -246,7 +253,7 @@ Design freeze date for flight controller is 18/05/26.
 
 - Can shrink the board down by 5-10mm, maybe that will help.
 
-## Date: 13/10/2026
+## Date: 2026-10-13
 
 - Most of fine component placement done, ready for routing.
 
@@ -256,7 +263,7 @@ Design freeze date for flight controller is 18/05/26.
 
 - Looks better now, better use of space, more consistent spacing and better placement.
 
-## Date: 14/10/2026
+## Date: 2026-10-14
 
 - Reviewed yesterday's work, looks okay for now.
 
@@ -268,7 +275,7 @@ Design freeze date for flight controller is 18/05/26.
 
 - Prefer QPQ1060 because it is temperature compensated but LCSC does not stock Qorvo SAWs. Sad.
 
-## Date: 16/10/2026
+## Date: 2026-10-16
 
 - Took day off from work, need to lock in to finish routing.
 
@@ -286,11 +293,11 @@ Design freeze date for flight controller is 18/05/26.
 
 - Stuck on how to do GND for 12V pads in mezzanine without cutting the 12V polygon, will think about it.
 
-## Date: 17/10/2026
+## Date: 2026-10-17
 
 -
 
-## Date: 23/10/2026
+## Date: 2026-10-23
 
 - Gain block spice model from Annie was better than what I had, using hers.
 
@@ -302,7 +309,7 @@ Design freeze date for flight controller is 18/05/26.
 
 - Another way to do it is inject a 1 AC current source into the port of interest and terminate other end, plot V_Port (=Z).
 
-## Date: 24/10/2026
+## Date: 2026-10-24
 
 - Locking in today, simulating each filter separately and going to tune each component.
 
@@ -328,9 +335,9 @@ Design freeze date for flight controller is 18/05/26.
 
 - **Important:** The shunt element is the tuning knob for real part. Increase X of shunt element to decrease Q factor meaning less transformation (Q = R_High / X_C). If high R to low R, then real part of Zout goes higher.
 
-## Date: 25/10/2026
+## Date: 2026-10-25
 
-## Date: 28/10/2026
+## Date: 2026-10-28
 
 - Spending some time on the FEM, very little resources available, datasheet is not very detailed.
 
@@ -352,7 +359,7 @@ Design freeze date for flight controller is 18/05/26.
 
 - Cripps paper is amazing. Very interesting read. Still working on it but will calculate Zopt at -3dBm (max we need) soon.
 
-## Date: 29/10/2026
+## Date: 2026-10-29
 
 - Looked through some open source designs with mixed signal, Dig + RF etc. for some routing inspiration. Hades from Phil's Lab is pretty decent.
 
@@ -362,13 +369,13 @@ Design freeze date for flight controller is 18/05/26.
 
 - **Important:** Z of transmission line is characteristic impedance which in ideal case does not depend on frequency. The reactance is cancelled out by L and C. Same applies to filters as well.
 
-## Date: 30/11/2026
+## Date: 2026-11-30
 
 - Spent most of the time on VRNDA motor driver PCB.
 
 - Did some work on spice sims with FEM, mostly done and tuning going good as well.
 
-## Date: 01/11/2026
+## Date: 2026-11-01
 
 - Played around with another PA IC Annie found, its spice model is not working for some reason, very expensive and needs external filters to work so cannot accurately characterize how it will interact with SX1262 recommended filters. Sticking with the FEM IC.
 
@@ -380,7 +387,7 @@ Design freeze date for flight controller is 18/05/26.
 
 - Updated about half of the front end in Altium with new smaller passives.
 
-## Date: 02/11/2026
+## Date: 2026-11-02
 
 - Made a radio only BOM and CPL, it costs 175 CAD extra for assembling radio section alone. Crazy expensive. Mainly because JLC economic assembly is only up to 6 layers. No way I am doing that.
 
@@ -394,7 +401,7 @@ Design freeze date for flight controller is 18/05/26.
 
 - Played round with RF layout a bit to see if anything works, some progress but nothing solid.
 
-## Date: 03/11/2026
+## Date: 2026-11-03
 
 - Some more playing around with layout, got a preliminary layout done, looks okay but a few things not liking: clearances are really tight, very constrained layout, still need to think about SI etc.
 
@@ -402,7 +409,7 @@ Design freeze date for flight controller is 18/05/26.
 
 - Did some routing and layout, still problems unsolved. Needs more work.
 
-## Date: 04/11/2026
+## Date: 2026-11-04
 
 - Did a quick review of the routing in sensitive places, changes:
 
@@ -446,7 +453,7 @@ Rotate / move a couple of caps near the MCU, thermal vias possible on FEM IC.
 
 - RF front end layout mostly done.
 
-## Date: 05/11/2026
+## Date: 2026-11-05
 
 - Quick review of yesterday's routing:
 
@@ -470,19 +477,19 @@ Increase VBAT trace width just to be safe.
 
 Don't forget the 12V-GND thing.
 
-## Date: 06/11/2026
+## Date: 2026-11-06
 
 - Most of routing and layout done, doing some touchups now and will start on silkscreen and DRC soon.
 
 - Fixed all the pending changes.
 
-## Date: 07/11/2026
+## Date: 2026-11-07
 
 - Read up more on coplanar waveguide routing, and corrected the impedance profile to coplanar. Defined proper V-to-V spacing and V-to-T spacing. Added proper shielding vias with a poly cutout for a defined trace to same layer pour spacing.
 
 - Implemented changes as per Shadab's review, discussion scheduled tomorrow for splitting the board.
 
-## Date: 08/11/2026
+## Date: 2026-11-08
 
 - **Mistake:** After a lot of discussions, sticking with the present board. My mistake, should have brought this up long before and had a proper discussion.
 
@@ -490,18 +497,18 @@ Don't forget the 12V-GND thing.
 
 - Spent most of the time just reviewing it.
 
-## Date: 09/11/2026
+## Date: 2026-11-09
 
 - Looks like the stack can be mounted with some optimizations, not ideal but works. My mistake, should have coordinated with mech long before.
 
 - Alex agreed to review it (yay). Looking forward to his suggestions.
 
-## Date: 10/11/2026
+## Date: 2026-11-10
 
 - Alex had a lot of useful suggestions, mostly related to DFT / DFM. Will start implementing them.
 
 - **Important:** Some very good practices to follow in future as well like 0R on interfaces, makes testing / debugging easier. 10R/100R (some value) on signal lines to use as jumper and acts as a low pass filter limiting the rise time, reduces overshoot and very good from EMI perspective. Add more notes and context, assuming somebody who knows nothing about the board is reviewing, they should be able to understand.
 
-## Date: 24/11/2026
+## Date: 2026-11-24
 
 - Did some post fab review of FC, unfortunately found two mistakes, not critical but still sad though. Documented them. Will keep on reviewing it.
