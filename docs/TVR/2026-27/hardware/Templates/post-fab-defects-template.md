@@ -70,7 +70,8 @@ Use template below for each entry
 - **Fix (next rev):**
 - **Process lesson:**
 - **Technical lesson:**
-- **Verification:**
+- **Mitigation Verification Plan:**
+- **Mitigation Result**:
 ```
 
 ID scheme: prefix by severity so the ID carries its own severity (C### critical,
